@@ -1,14 +1,14 @@
 #!/usr/bin/python
 
-import sys
-import re
-from irtokz.indic_tokenize import tokenize_ind #Tokenizer for Indian languages
+from irtokz.indic_tokenize import tokenize_ind
 
 inp_file = open("input.txt", "r", encoding="utf-8").read()
-out_file = open("text.txt", "w", encoding="utf-8")
+out_file = open("output.txt", "w", encoding="utf-8")
 language = "mal"
 tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
-token_text = tok.tokenize(inp_file)
-out_file.write(token_text)
-
-
+text = tok.tokenize(inp_file)
+words = text.split()
+tokens = [tk for tk in words if tk != '.']
+print(tokens)
+for t in tokens:
+    out_file.write("%s\n" % t)

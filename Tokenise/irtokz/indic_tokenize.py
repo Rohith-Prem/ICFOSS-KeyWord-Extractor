@@ -42,8 +42,9 @@ class tokenize_ind():
         # seperate out on unicode currency symbols
         self.ucurrency = re.compile(u'([\u20a0-\u20cf])')
         # seperate out all "other" ASCII special characters
-        self.specascii = re.compile(r'([\\!@#$%^&*()_+={\[}\]|";:<>?`~/])')
-        #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])") 
+        self.specascii = re.compile(r'([!@#$%^&*()_+={\[}\]|";:<>?`~/])')
+        #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])")
+        #self.backslash = re.compile(u'(U+005C)')
 
         #keep multiple dots together
         self.multidot = re.compile(r'(\.\.+)([^\.])')
@@ -85,23 +86,23 @@ class tokenize_ind():
     def tokenize(self, text):
         # text = text.decode('utf-8', 'ignore')
         text = self.normalize(text)
-        text = ' %s ' %(text)
+        text = '%s' %(text)
         # remove junk characters
         text = self.junk.sub('', text)
-        # separate out on Latin-1 supplementary characters
-        text = self.latin.sub(r' \1 ', text)
-        # separate out on general unicode punctituations except "’"
-        text = self.upunct.sub(r' \1 ', text)
-        # separate out on unicode mathematical operators
-        text = self.umathop.sub(r' \1 ', text)
+        #remove Latin-1 supplementary characters
+        text = self.latin.sub('', text)
+        #remove general unicode punctituations except "’"
+        text = self.upunct.sub('', text)
+        #remove unicode mathematical operators
+        text = self.umathop.sub('', text)
         # separate out on unicode fractions
-        text = self.ufrac.sub(r' \1 ', text)
-        # separate out on unicode superscripts and subscripts
-        text = self.usupsub.sub(r' \1 ', text)
-        # separate out on unicode currency symbols
-        text = self.ucurrency.sub(r' \1 ', text)
-        # separate out all "other" ASCII special characters
-        text = self.specascii.sub(r' \1 ', text)
+        #text = self.ufrac.sub('', text)
+        #remove superscripts and subscripts
+        text = self.usupsub.sub('', text)
+        #remove unicode currency symbols
+        text = self.ucurrency.sub('', text)
+        #remove all "other" ASCII special characters
+        text = self.specascii.sub('', text)
 
         #split contractions right (both "'" and "’")
         text = self.nacna.sub(r"\1 \2 \3", text)
@@ -132,8 +133,8 @@ class tokenize_ind():
         text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
         text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
         #separate out on Malayalam characters followed by non-Malayalam characters
-        text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1 \2', text)
-        text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
+        #text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1 \2', text)
+        #text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
         #seperate out Malayalam fraction symbols
         text = re.sub(u'([\u0d73\u0d74\u0d75])', r' \1 ', text)
         
@@ -150,12 +151,5 @@ class tokenize_ind():
         if self.split_sen:
                 text = self.splitsenir1.sub(r' \1\n\2', text)
                 text = self.splitsenir2.sub(r' \1 \2\n', text)
-
-        out_file = open("output.txt", "w", encoding="utf-8")
-        words = text.split()
-        tokens = [tk for tk in words if tk != '.']
-        print(tokens)
-        for t in tokens:
-            out_file.write("%s\n" % t)
         return text
 
