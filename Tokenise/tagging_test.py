@@ -18,6 +18,12 @@ for t in tokens:
 
 s = Sandhisplitter()
 
+stem_words = []
 for t in tokens:
     split_words = s.split(t[0])
+    stem = split_words[0]
+    stem_words.append(stem)
+
+print(stem_words)
+
 

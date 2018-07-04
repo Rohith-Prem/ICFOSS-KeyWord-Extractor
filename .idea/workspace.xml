@@ -23,8 +23,8 @@
       <file leaf-file-name="tagging_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tokenise/tagging_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="340">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -65,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="343" />
     <option name="y" value="-28" />
     <option name="width" value="532" />
@@ -259,8 +259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tokenise/tagging_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="340">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
