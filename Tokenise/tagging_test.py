@@ -36,16 +36,20 @@ for t in tokens:
         else:
             nouns.setdefault(id, []).append(3)
         id += 1
-print(nouns)
 
-count = 0
+
 for i in nouns.keys():
+    count = 0
     values = nouns[i]
     check = values[0]
     re.compile(check, re.UNICODE)
     for j in nouns.values():
-        match = check.match(j[0].decode('utf-8'))
-        count =
+        if check == j[0]:
+            count += 1
+    nouns.setdefault(i, []).append(count)
+
+print(nouns)
+
 
 
 
