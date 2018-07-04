@@ -23,8 +23,8 @@
       <file leaf-file-name="tagging_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tokenise/tagging_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="289">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -59,12 +59,15 @@
       <list>
         <option value="$PROJECT_DIR$/Tokenise/tokenise.py" />
         <option value="$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py" />
+        <option value="$PROJECT_DIR$/Tokenise/sandhisplitter/splitter.py" />
+        <option value="$PROJECT_DIR$/Tokenise/sandhisplitter/__init__.py" />
         <option value="$PROJECT_DIR$/Tokenise/tagging_test.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="841" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="343" />
+    <option name="y" value="-28" />
     <option name="width" value="532" />
     <option name="height" value="735" />
   </component>
@@ -84,6 +87,12 @@
               <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
               <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
               <item name="Tokenise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
+              <item name="Tokenise" type="462c0819:PsiDirectoryNode" />
+              <item name="sandhisplitter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -171,6 +180,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -220,10 +230,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tokenise/sandhisplitter/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tokenise/sandhisplitter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tokenise/sandhisplitter/splitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tokenise/tagging_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="289">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>

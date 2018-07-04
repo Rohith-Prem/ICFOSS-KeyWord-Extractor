@@ -1,5 +1,6 @@
 from irtokz.indic_tokenize import tokenize_ind
 import numpy as np
+from sandhisplitter import Sandhisplitter
 
 in_file = open("tagged_text.txt", "r", encoding="utf-8").read()
 out_file = open("tagged_split.txt", "w", encoding="utf-8")
@@ -14,6 +15,9 @@ tokens = [tk.split('\\') for tk in words if tk != '.']
 #print(tokens)
 for t in tokens:
     out_file.write("%s\n" % t)
-mat = np.matrix(tokens)
-print(mat)
+
+s = Sandhisplitter()
+
+for t in tokens:
+    split_words = s.split(t[0])
 
