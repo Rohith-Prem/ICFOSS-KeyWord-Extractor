@@ -13,21 +13,22 @@ def getdata(i):
 		if len(links) != 1:
 			txt=soup.findAll("h1")[0].text
 			txt+="\n"
-			path= '/home/sid/icfoss/final_scrap/'
+			path= 'E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Tokenise'
 			
 			for t in links:
 					    txt+=t.text
 			
-			filename=path+"sai"+".utf8"	
+			filename=path+"\scrapped_text"+".utf8"
 			f=codecs.open(str(filename),'a','utf-8')
 			f.write(""+txt+"")
 	else:
 		print("error")
 		
 def main():
-		print("enter the link\n")
-		ll=raw_input()
-		getdata(ll)
+		#print("enter the link\n")
+		#ll=input()
+		url = "http://www.deshabhimani.com/news/kerala/swaminathan-commission-report/735250"
+		getdata(url)
 		
 
 if __name__=="__main__":

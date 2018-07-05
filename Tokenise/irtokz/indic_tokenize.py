@@ -135,8 +135,8 @@ class tokenize_ind():
                 text += "%s " % word
 
         #seperate out "," except for Malayalam and Ascii digits
-        #text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
-        #text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
+        text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
+        text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
         #separate out on Malayalam characters followed by non-Malayalam characters
         #text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1 \2', text)
         #text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
