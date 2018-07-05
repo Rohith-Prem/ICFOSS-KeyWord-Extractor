@@ -1,6 +1,7 @@
 import re
 
 in_file = open("tagged_split.txt", 'r', encoding='utf-8')
+number_of_words = open("wordcount.txt", 'r')
 text = in_file.read()
 #print(text)
 words = text.split()
@@ -26,6 +27,7 @@ for t in tokens:
             keywords.setdefault(id, []).append(5)
         id += 1
 
+
 #counting frequency
 for i in keywords.keys():
     count = 0
@@ -37,14 +39,21 @@ for i in keywords.keys():
             count += 1
     keywords.setdefault(i, []).append(count)
 
-keys = keywords.values()
-#deleting duplicates
-for j in keywords.keys():
-    list = keywords[j]
-    word = list[0]
-    re.compile(word, re.UNICODE)
-    for k in keys:
-        if word == k[0]:
-            keywords.pop(j)
 
-print(keywords)
+#deleting duplicates
+result = {}
+for key, value in keywords.items():
+    if value not in result.values():
+        result[key] = value
+
+print(result)
+
+#changing frequency to relative term frequency
+wordcount = float(number_of_words.read())
+for key, value in result.items():
+    tf = value[2]/wordcount
+    result[key] = [value[0], value[1], tf]
+
+print(result)
+
+#assigning depth

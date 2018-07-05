@@ -42,7 +42,7 @@ class tokenize_ind():
         # seperate out on unicode currency symbols
         self.ucurrency = re.compile(u'([\u20a0-\u20cf])')
         # seperate out all "other" ASCII special characters
-        self.specascii = re.compile(r'([!@#$%^&*()_+={\[}\]|";:<>?`~/])')
+        self.specascii = re.compile(r'([!@#$%^&*()_\-+={\[}\]|";:<>?`~/])')
         #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])")
         #self.backslash = re.compile(u'(U+005C)')
 
@@ -55,8 +55,6 @@ class tokenize_ind():
         self.nacna = re.compile(u"([^a-zA-Z\u0080-\u024f])(['\u2019])([^a-zA-Z\u0080-\u024f])")
         self.naca = re.compile(u"([^a-zA-Z0-9\u0966-\u096f\u0080-\u024f])(['\u2019])([a-zA-Z\u0080-\u024f])")
 
-        #multiple hyphens
-        self.multihyphen = re.compile('(-+)')
         #restore multi-dots
         self.restoredots = re.compile(r'(DOT)(\1*)MULTI')
         self.restoreviram = re.compile(r'(PNVM)(\1*)MULTI')
@@ -144,13 +142,13 @@ class tokenize_ind():
         text = re.sub(u'([\u0d73\u0d74\u0d75])', r' \1 ', text)
         
         #seperate out hyphens 
-        text = self.multihyphen.sub(lambda m: r'%s' %(' '.join('-'*len(m.group(1)))), text) 
-        text = re.sub(u'(-?[0-9\u0d66-\u0D72]-+[0-9\u0d66-\u0D72]-?){,}',lambda m: r'%s' %(m.group().replace('-', ' - ')), text)
-        text = text.split()
-        text = ' '.join(text)
+        #text = self.multihyphen.sub(lambda m: r'%s' %(' '.join('-'*len(m.group(1)))), text)
+        #text = re.sub(u'(-?[0-9\u0d66-\u0D72]-+[0-9\u0d66-\u0D72]-?){,}',lambda m: r'%s' %(m.group().replace('-', '')), text)
+        #text = text.split()
+        #text = ' '.join(text)
 
         #restore multiple dots
-        #text = self.restoredots.sub(lambda m: r'.%s' % ('.' * (len(m.group(2)) / 3)), text)
+        text = self.restoredots.sub(lambda m: r'.%s' % ('.' * (len(m.group(2)) / 3)), text)
 
         #split sentences
         if self.split_sen:

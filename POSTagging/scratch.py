@@ -36,9 +36,10 @@ for line in soup.find_all(attrs ={"size":"3"}):
 				s+=line.string+'\n'
 
 filename = "tagged_text.txt"
-f=codecs.open(str(filename),'a', encoding='utf-8')
-
-f.write("" + s + "")
+fout = open("tagged_text.txt", 'w', encoding='utf-8')
+fout.write("" + s + "")
+f.close()
+fout.close()
 
 
 
