@@ -121,13 +121,18 @@ class tokenize_ind():
                 dotless = word[:-1]
                 if dotless.isdigit():
                     word = dotless + '.'
+                    text += "%s" % word
                 elif ('.' in dotless and re.search('[a-zA-Z]', dotless)) or \
-                        self.NBP.get(dotless, 0) == 1 or (i < text_len and words[i + 1][0].islower()): pass
-                elif self.NBP.get(dotless, 0) == 2 and (i < text_len and words[i + 1][0].isdigit()): pass
-                elif i < text_len and words[i + 1][0].isdigit(): pass
+                        self.NBP.get(dotless, 0) == 1 or (i < text_len and words[i + 1][0].islower()):
+                    text += "%s" % word
+                elif self.NBP.get(dotless, 0) == 2 and (i < text_len and words[i + 1][0].isdigit()):
+                    text += "%s " % word
+                elif i < text_len and words[i + 1][0].isdigit():
+                    text += "%s " % word
                 else:
                     word = dotless + '.'
-            text += "%s " % word
+            else:
+                text += "%s " % word
 
         #seperate out "," except for Malayalam and Ascii digits
         text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
@@ -145,7 +150,7 @@ class tokenize_ind():
         text = ' '.join(text)
 
         #restore multiple dots
-        text = self.restoredots.sub(lambda m: r'.%s' % ('.' * (len(m.group(2)) / 3)), text)
+        #text = self.restoredots.sub(lambda m: r'.%s' % ('.' * (len(m.group(2)) / 3)), text)
 
         #split sentences
         if self.split_sen:
