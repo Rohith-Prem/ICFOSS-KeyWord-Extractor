@@ -6,7 +6,7 @@ text = in_file.read()
 #print(text)
 words = text.split()
 #print(words)
-tokens = [tk.split('\\') for tk in words if tk != '.']
+tokens = [tk.split('\\') for tk in words if '\\' in tk]
 #print(tokens)
 tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX'] #nnn-1 nnnp-2 nnnst-3 verb-4
 keywords = dict()
@@ -21,10 +21,11 @@ for t in tokens:
             keywords.setdefault(id, []).append(2)
         elif t[1] == "NNST":
             keywords.setdefault(id, []).append(3)
-        elif t[1] == "VVMNF" or t[1] == "VVAUX":
+        elif t[1] == "VVMVNF" or t[1] == "VVAUX":
             keywords.setdefault(id, []).append(4)
         else:
-            keywords.setdefault(id, []).append(5)
+            break
+            #keywords.setdefault(id, []).append(5)
         id += 1
 
 
@@ -39,6 +40,7 @@ for i in keywords.keys():
             count += 1
     keywords.setdefault(i, []).append(count)
 
+#print(keywords)
 
 #deleting duplicates
 result = {}
@@ -46,7 +48,7 @@ for key, value in keywords.items():
     if value not in result.values():
         result[key] = value
 
-print(result)
+#print(result)
 
 #changing frequency to relative term frequency
 wordcount = float(number_of_words.read())
