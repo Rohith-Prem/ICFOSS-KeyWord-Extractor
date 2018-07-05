@@ -32,11 +32,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="split_tagged.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="split_tagged.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/POSTagging/split_tagged.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature_extraction.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indic_tokenize.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/POSTagging/irtokz/indic_tokenize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1887">
+              <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -49,15 +70,6 @@
               <folding>
                 <element signature="e#4#19#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indic_tokenize.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1020">
-              <caret line="53" column="48" lean-forward="true" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -85,7 +97,9 @@
         <option value="$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py" />
         <option value="$PROJECT_DIR$/Tokenise/tokenise.py" />
         <option value="$PROJECT_DIR$/POSTagging/scratch.py" />
+        <option value="$PROJECT_DIR$/POSTagging/irtokz/indic_tokenize.py" />
         <option value="$PROJECT_DIR$/POSTagging/split_tagged.py" />
+        <option value="$PROJECT_DIR$/Features/feature_extraction.py" />
       </list>
     </option>
   </component>
@@ -110,7 +124,18 @@
             <path>
               <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
               <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
+              <item name="Features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
               <item name="POSTagging" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
+              <item name="POSTagging" type="462c0819:PsiDirectoryNode" />
+              <item name="irtokz" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -135,8 +160,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.split_tagged">
-    <configuration name="final" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.feature_extraction">
+    <configuration name="feature_extraction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ICFOSS-KeyWord-Extractor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,11 +169,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Features" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Features/feature_extraction.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -229,17 +254,17 @@
     <list>
       <item itemvalue="Python.tokenise" />
       <item itemvalue="Python.tagging_test" />
-      <item itemvalue="Python.final" />
       <item itemvalue="Python.scratch" />
       <item itemvalue="Python.split_tagged" />
+      <item itemvalue="Python.feature_extraction" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.feature_extraction" />
         <item itemvalue="Python.split_tagged" />
         <item itemvalue="Python.tagging_test" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.tokenise" />
-        <item itemvalue="Python.final" />
       </list>
     </recent_temporary>
   </component>
@@ -341,13 +366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tokenise/tokenise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -375,10 +393,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/POSTagging/irtokz/indic_tokenize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/POSTagging/tagged_split.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/POSTagging/split_tagged.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tokenise/tokenise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
         </state>
       </provider>
     </entry>

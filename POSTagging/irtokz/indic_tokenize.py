@@ -113,33 +113,33 @@ class tokenize_ind():
         text = text.replace("''", " ' ' ")
 
         #handle non breaking prefixes
-        words = text.split()
-        text_len = len(words) - 1
-        text = str()
-        for i, word in enumerate(words):
-            if word.endswith('.'):
-                dotless = word[:-1]
-                if dotless.isdigit():
-                    word = dotless + '.'
-                    text += "%s" % word
-                elif ('.' in dotless and re.search('[a-zA-Z]', dotless)) or \
-                        self.NBP.get(dotless, 0) == 1 or (i < text_len and words[i + 1][0].islower()):
-                    text += "%s" % word
-                elif self.NBP.get(dotless, 0) == 2 and (i < text_len and words[i + 1][0].isdigit()):
-                    text += "%s " % word
-                elif i < text_len and words[i + 1][0].isdigit():
-                    text += "%s " % word
-                else:
-                    word = dotless + '.'
-            else:
-                text += "%s " % word
+        #words = text.split()
+        #text_len = len(words) - 1
+        #text = str()
+        #for i, word in enumerate(words):
+        #    if word.endswith('.'):
+        #        dotless = word[:-1]
+        #        if dotless.isdigit():
+        #            word = dotless + '.'
+        #            text += "%s" % word
+        #        elif ('.' in dotless and re.search('[a-zA-Z]', dotless)) or \
+        #                self.NBP.get(dotless, 0) == 1 or (i < text_len and words[i + 1][0].islower()):
+        #            text += "%s" % word
+        #        elif self.NBP.get(dotless, 0) == 2 and (i < text_len and words[i + 1][0].isdigit()):
+        #            text += "%s " % word
+        #        elif i < text_len and words[i + 1][0].isdigit():
+        #            text += "%s " % word
+        #        else:
+        #            word = dotless + '.'
+        #    else:
+        #       text += "%s " % word
 
         #seperate out "," except for Malayalam and Ascii digits
         text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
         text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
         #separate out on Malayalam characters followed by non-Malayalam characters
         #text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1 \2', text)
-        #text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
+        text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
         #seperate out Malayalam fraction symbols
         text = re.sub(u'([\u0d73\u0d74\u0d75])', r' \1 ', text)
         
