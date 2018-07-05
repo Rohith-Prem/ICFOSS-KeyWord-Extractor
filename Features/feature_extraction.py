@@ -10,6 +10,7 @@ tokens = [tk.split('\\') for tk in words if tk != '.']
 tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX'] #nnn-1 nnnp-2 nnnst-3 verb-4
 keywords = dict()
 id = 0
+#filtering nouns and verbs and assigning priority
 for t in tokens:
     if t[1] in tag and len(t[0])>2:
         keywords.setdefault(id, []).append(t[0])
@@ -25,7 +26,7 @@ for t in tokens:
             keywords.setdefault(id, []).append(5)
         id += 1
 
-
+#counting frequency
 for i in keywords.keys():
     count = 0
     values = keywords[i]
@@ -36,8 +37,14 @@ for i in keywords.keys():
             count += 1
     keywords.setdefault(i, []).append(count)
 
+keys = keywords.values()
+#deleting duplicates
 for j in keywords.keys():
-    values = keywords[j]
-    word = values[]
+    list = keywords[j]
+    word = list[0]
+    re.compile(word, re.UNICODE)
+    for k in keys:
+        if word == k[0]:
+            keywords.pop(j)
 
 print(keywords)
