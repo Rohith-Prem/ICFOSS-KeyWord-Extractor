@@ -16,9 +16,7 @@ def getdata(i):
         links = soup.findAll("p")
         if len(links) != 1:
             head = soup.findAll("h1")[0].text
-            head_path = 'E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\'
-            filename = head_path + "head_url" + ".utf8"
-            f = codecs.open(str(filename), 'a', 'utf-8')
+            f = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\head_url.txt", 'a', encoding='utf-8')
             f.write(head)
             txt = soup.findAll("h1")[0].text
             txt += "\n"
@@ -43,9 +41,7 @@ def main():
     urls = getWordsFromURL(url1)
     # change this according to news url pattern
     urls = urls[2:len(urls) - 1]
-    head_path = 'E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\'
-    filename = head_path + "head_url" + ".utf8"
-    f = codecs.open(str(filename), 'a', 'utf-8')
+    f = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\head_url.txt", 'a', encoding='utf-8')
     f.write("\n")
     for u in urls:
         if len(u) > 3:

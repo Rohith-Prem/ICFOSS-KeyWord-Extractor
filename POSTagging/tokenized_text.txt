@@ -8,9 +8,6 @@
 പ്രൊഫസര്
 ടി.ജെ
 ജോസഫ്
-FOLLOW
-US
-ONDOWNLOAD
 'അവിടെ
 ഇപ്പോഴും
 പഠിക്കുന്ന
@@ -153,15 +150,4 @@ ONDOWNLOAD
 ടി.ജെ
 ജോസഫിന്റെ
 കൈപ്പത്തി
-വെട്ടിമാറ്റുന്നത്.content
-highlight
-prof.t.j
-joseph
-abhimanyu
-murder
-maharajas
-college
-sfi
-popular
-front
-sdpi
+..

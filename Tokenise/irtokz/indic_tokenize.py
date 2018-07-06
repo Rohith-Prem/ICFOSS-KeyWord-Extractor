@@ -44,10 +44,10 @@ class tokenize_ind():
         # seperate out all "other" ASCII special characters
         self.specascii = re.compile(r'([!@#$%^&*()_\-+={\[}\]|";:<>?`~/])')
         #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])")
-        #self.backslash = re.compile(u'(U+005C)')
+        self.english = re.compile(r'([a-zA-Z])')
 
         #keep multiple dots together
-        self.multidot = re.compile(r'(\.\.+)([^\.])')
+        #self.multidot = re.compile(r'(\.\.+)([^\.])')
         #split contractions right (both "'" and "’")
         self.numcs = re.compile(u"([0-9\u0966-\u096f])(['\u2019])s")
         self.aca = re.compile(u"([a-zA-Z\u0080-\u024f])(['\u2019])([a-zA-Z\u0080-\u024f])")
@@ -101,6 +101,8 @@ class tokenize_ind():
         text = self.ucurrency.sub('', text)
         #remove all "other" ASCII special characters
         text = self.specascii.sub('', text)
+        #remove English characters
+        text = self.english.sub('', text)
 
         #split contractions right (both "'" and "’")
         text = self.nacna.sub(r"\1 \2 \3", text)

@@ -58,4 +58,9 @@ for key, value in result.items():
 
 print(result)
 
-#assigning depth
+#checking presence in heading and url
+headurl = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\head_url.txt", 'r', encoding='utf-8').read()
+headurl_words = headurl.split()
+for key, value in result.items():
+    print(value[0])
+

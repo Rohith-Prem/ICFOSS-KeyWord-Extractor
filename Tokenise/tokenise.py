@@ -9,7 +9,7 @@ wordcount = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\wordcount.tx
 language = "mal"
 tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
 text = tok.tokenize(inp_file)
-print(text)
+#print(text)
 words = text.split()
 tokens = [tk for tk in words if tk not in [".", ",", "'"]]
 number_of_words = len(tokens)
