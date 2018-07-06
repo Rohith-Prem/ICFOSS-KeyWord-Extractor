@@ -1,5 +1,16 @@
 import requests
+from selenium import webdriver
+from bs4 import BeautifulSoup
 import codecs
+from selenium.webdriver.common.keys import Keys
+from time import sleep
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.common.exceptions import NoSuchElementException
 import re
 
 from bs4 import BeautifulSoup
@@ -32,6 +43,7 @@ def getdata(i):
 
 
 def main():
+    path = "E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\POSTagging"
     # print("enter the link\n")
     # ll=input()
     url1 = "http://www.mathrubhumi.com/news/kerala/malayalam/prof-t-j-joseph-abhimanyu-murder-maharajas-college-sfi-popular-front-sdpi-1.2945324"
@@ -45,8 +57,18 @@ def main():
     f.write("\n")
     for u in urls:
         if len(u) > 3:
-            f.write(" " + u)
+	    
+		driver = webdriver.Firefox(path)
+		driver.get('http://olam.in/Transliterate/')
 
+		a = driver.find_element_by_id('transliterate')
+		a.send_keys(u,Keys.ENTER)
+		sleep(2)
+		b = driver.find_element_by_id('transliterate')
 
+		mal_u = driver.find_element_by_id('transliterate').get_attribute('value')
+	        f.write(" " + mal_u)
+
+  
 if __name__ == "__main__":
     main()
