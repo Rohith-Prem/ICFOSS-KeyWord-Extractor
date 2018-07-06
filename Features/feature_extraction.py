@@ -1,6 +1,7 @@
-# -*- coding=utf-8 -*-
+# -*- coding: utf-8 -*-
 import re
 import csv
+
 
 in_file = open("tagged_split.txt", 'r', encoding='utf-8')
 number_of_words = open("wordcount.txt", 'r')
@@ -12,7 +13,7 @@ tokens = [tk.split('\\') for tk in words if '\\' in tk]
 # print(tokens)
 tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX']  # nnn-1 nnnp-2 nnnst-3 verb-4
 keywords = dict()
-id = 0
+id = 1
 
 # filtering nouns and verbs and assigning priority
 for t in tokens:
@@ -43,23 +44,20 @@ for i in keywords.keys():
         if check == j[0]:
             count += 1
     keywords.setdefault(i, []).append(count)
+#print(keywords)
 
-# print(keywords)
-
-# deleting duplicates
+#deleting duplicates
 result = {}
 for key, value in keywords.items():
     if value not in result.values():
         result[key] = value
-
-# print(result)
+#print(result)
 
 # changing frequency to relative term frequency
 wordcount = float(number_of_words.read())
 for key, value in result.items():
     tf = value[2] / wordcount
     result[key] = [value[0], value[1], tf]
-
 # print(result)
 
 # checking presence in heading and url
@@ -71,16 +69,21 @@ for key, value in result.items():
         result.setdefault(key, []).append(1)
     else:
         result.setdefault(key, []).append(0)
+#print(result)
+
+#assigning depth
+for key,values in result.items():
+    depth = float(key/wordcount)
+    result.setdefault(key, []).append(depth)
 print(result)
 
-# writing to CSV file
-with open('features.csv', 'a') as csvfile:
-    fieldnames = ['POSTagPriority', 'TF', 'Head/URL']
+#writing to CSV file
+with open('features.csv', 'a', encoding='utf-8') as csvfile:
+    fieldnames = ['POS', 'TF', 'Head/URL', 'Depth']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader()
-    for key,value in result.items():
-        #malword = str(value[0]).encode('utf-8')
-        writer.writerow({'POSTagPriority': value[1], 'TF': value[2], 'Head/URL': value[3]})
+    for key, value in result.items():
+        writer.writerow({'POS': value[1], 'TF': value[2], 'Head/URL': value[3], 'Depth': value[4]})
 
 

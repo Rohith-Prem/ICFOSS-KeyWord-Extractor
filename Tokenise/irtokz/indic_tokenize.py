@@ -42,7 +42,7 @@ class tokenize_ind():
         # seperate out on unicode currency symbols
         self.ucurrency = re.compile(u'([\u20a0-\u20cf])')
         # seperate out all "other" ASCII special characters
-        self.specascii = re.compile(r'([!@#$%^&*()_\-+={\[}\]|";:<>?`~/])')
+        self.specascii = re.compile(r'([!@#$%^&*\',()_\-+={\[}\]|";:<>?`~/])')
         #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])")
         self.english = re.compile(r'([a-zA-Z])')
 
@@ -56,15 +56,15 @@ class tokenize_ind():
         self.naca = re.compile(u"([^a-zA-Z0-9\u0966-\u096f\u0080-\u024f])(['\u2019])([a-zA-Z\u0080-\u024f])")
 
         #restore multi-dots
-        self.restoredots = re.compile(r'(DOT)(\1*)MULTI')
-        self.restoreviram = re.compile(r'(PNVM)(\1*)MULTI')
-        self.restoredviram = re.compile(r'(DGVM)(\1*)MULTI')
+        #self.restoredots = re.compile(r'(DOT)(\1*)MULTI')
+        #self.restoreviram = re.compile(r'(PNVM)(\1*)MULTI')
+        #self.restoredviram = re.compile(r'(DGVM)(\1*)MULTI')
 
         #split sentences 
-        self.splitsenir1 = re.compile(u' ([|.?\u0964\u0965]) ([\u0900-\u0d7f\u201c\u2018A-Z])')
-        self.splitsenir2 = re.compile(u' ([|.?\u0964\u0965]) ([\)\}\]\'"\u2019\u201d> ]+) ')
+        #self.splitsenir1 = re.compile(u' ([|.?\u0964\u0965]) ([\u0900-\u0d7f\u201c\u2018A-Z])')
+        #self.splitsenir2 = re.compile(u' ([|.?\u0964\u0965]) ([\)\}\]\'"\u2019\u201d> ]+) ')
 
-    def normalize(self,text):
+    def normalize(self, text):
         """
         Performs some common normalization, which includes: 
             - Byte order mark, word joiner, etc. removal 
@@ -150,11 +150,11 @@ class tokenize_ind():
         #text = ' '.join(text)
 
         #restore multiple dots
-        text = self.restoredots.sub(lambda m: r'.%s' % ('.' * (len(m.group(2)) / 3)), text)
+        #text = self.restoredots.sub(lambda m: r'.%s' % ('.' * (len(m.group(2)) / 3)), text)
 
         #split sentences
-        if self.split_sen:
-                text = self.splitsenir1.sub(r' \1\n\2', text)
-                text = self.splitsenir2.sub(r' \1 \2\n', text)
+        #if self.split_sen:
+        #        text = self.splitsenir1.sub(r' \1\n\2', text)
+        #        text = self.splitsenir2.sub(r' \1 \2\n', text)
         return text
 

@@ -10,6 +10,8 @@ language = "mal"
 tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
 text = tok.tokenize(inp_file)
 #print(text)
+
+#tokenizing to words
 words = text.split()
 tokens = [tk for tk in words if tk not in [".", ",", "'"]]
 number_of_words = len(tokens)
