@@ -78,12 +78,11 @@ for key,values in result.items():
 print(result)
 
 #writing to CSV file
-with open('features.csv', 'a', encoding='utf-8') as csvfile:
+with open('features.csv', 'a') as csvfile:
     fieldnames = ['POS', 'TF', 'Head/URL', 'Depth']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
+    #writer = csv.writer(csvfile)
     writer.writeheader()
     for key, value in result.items():
         writer.writerow({'POS': value[1], 'TF': value[2], 'Head/URL': value[3], 'Depth': value[4]})
-
 
