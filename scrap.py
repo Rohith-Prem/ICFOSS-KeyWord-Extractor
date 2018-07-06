@@ -1,7 +1,11 @@
 import requests
 import codecs
+import re
 
 from bs4 import BeautifulSoup
+
+def getWordsFromURL(url):
+	    return re.compile(r'[\:/?=\-&]+',re.UNICODE).split(url)
 
 
 def getdata(i):
@@ -11,6 +15,11 @@ def getdata(i):
         soup = BeautifulSoup(resp.text, 'html.parser')
         links = soup.findAll("p")
         if len(links) != 1:
+            head = soup.findAll("h1")[0].text
+            head_path = 'E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\'
+            filename = head_path + "head_url" + ".utf8"
+            f = codecs.open(str(filename), 'a', 'utf-8')
+            f.write(head)
             txt = soup.findAll("h1")[0].text
             txt += "\n"
             #path = 'E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Tokenise'
@@ -29,6 +38,18 @@ def main():
     # ll=input()
     url1 = "http://www.mathrubhumi.com/news/kerala/malayalam/prof-t-j-joseph-abhimanyu-murder-maharajas-college-sfi-popular-front-sdpi-1.2945324"
     getdata(url1)
+
+    # print(getWordsFromURL(url1))
+    urls = getWordsFromURL(url1)
+    # change this according to news url pattern
+    urls = urls[2:len(urls) - 1]
+    head_path = 'E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\'
+    filename = head_path + "head_url" + ".utf8"
+    f = codecs.open(str(filename), 'a', 'utf-8')
+    f.write("\n")
+    for u in urls:
+        if len(u) > 3:
+            f.write(" " + u)
 
 
 if __name__ == "__main__":
