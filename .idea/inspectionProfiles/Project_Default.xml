@@ -32,6 +32,7 @@
           <option value="Tokenise.sandhisplitter.joiner" />
           <option value="Tokenise.sandhisplitter.postprocessor" />
           <option value="str.close" />
+          <option value="Features.feature_extraction.pos" />
         </list>
       </option>
     </inspection_tool>

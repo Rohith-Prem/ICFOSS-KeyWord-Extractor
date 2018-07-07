@@ -20,13 +20,15 @@ for t in tokens:
     if t[1] in tag and len(t[0]) > 2:
         keywords.setdefault(id, []).append(t[0])
         if t[1] == "NNN":
-            keywords.setdefault(id, []).append(1)
+            keywords.setdefault(id, []).append("NNN")
         elif t[1] == "NNNP":
-            keywords.setdefault(id, []).append(2)
+            keywords.setdefault(id, []).append("NNNP")
         elif t[1] == "NNST":
-            keywords.setdefault(id, []).append(3)
-        elif t[1] == "VVMVNF" or t[1] == "VVAUX":
-            keywords.setdefault(id, []).append(4)
+            keywords.setdefault(id, []).append("NNST")
+        elif t[1] == "VVMVNF":
+            keywords.setdefault(id, []).append("VVMVNF")
+        elif t[1] == "VVAUX":
+            keywords.setdefault(id, []).append("VVAUX")
         else:
             break
             # keywords.setdefault(id, []).append(5)
@@ -77,12 +79,29 @@ for key,values in result.items():
     result.setdefault(key, []).append(depth)
 print(result)
 
-#writing to CSV file
-with open('features.csv', 'a') as csvfile:
-    fieldnames = ['POS', 'TF', 'Head/URL', 'Depth']
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    #writer = csv.writer(csvfile)
-    writer.writeheader()
-    for key, value in result.items():
-        writer.writerow({'POS': value[1], 'TF': value[2], 'Head/URL': value[3], 'Depth': value[4]})
+#writing to features text file
+f_out = open("features.txt", 'a', encoding='utf-8')
+for value in result.values():
+    wd = str(value[0])
+    pos = str(value[1])
+    tf = str(value[2])
+    hu = str(value[3])
+    dp = str(value[4])
+    line = wd + " " + pos + " " + " " + tf + " " + " " + hu + " " + dp
+    f_out.write(line+"\n")
 
+
+
+
+
+
+
+
+#with open('features.csv', 'a') as csvfile:
+    #fieldnames = ['POS', 'TF', 'Head/URL', 'Depth']
+    #writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    #writer = csv.writer(csvfile)
+    #writer.writeheader()
+#    for value in result.values():
+        #malword = value[0].encode('utf-8')
+#        writer.writerow({'POS': value[1], 'TF': value[2], 'Head/URL': value[3], 'Depth': value[4]})
