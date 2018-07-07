@@ -87,7 +87,7 @@ for value in result.values():
     tf = str(value[2])
     hu = str(value[3])
     dp = str(value[4])
-    line = wd + " " + pos + " " + " " + tf + " " + " " + hu + " " + dp
+    line = wd + " " + pos + " " + tf + " " + hu + " " + dp
     f_out.write(line+"\n")
 
 
