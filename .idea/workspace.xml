@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca5f7f91-c329-48bb-8f45-b44fa43e472e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/feature_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/feature_extraction.py" afterDir="false" />
-    </list>
+    <list default="true" id="ca5f7f91-c329-48bb-8f45-b44fa43e472e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +40,7 @@
       <file leaf-file-name="feature_extraction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="187">
               <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
@@ -118,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="343" />
     <option name="y" value="-28" />
     <option name="width" value="532" />
@@ -511,7 +507,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="187">
           <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
