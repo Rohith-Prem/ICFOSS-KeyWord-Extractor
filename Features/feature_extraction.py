@@ -96,7 +96,6 @@ for value in result.values():
 
 
 
-
 #with open('features.csv', 'a') as csvfile:
     #fieldnames = ['POS', 'TF', 'Head/URL', 'Depth']
     #writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
