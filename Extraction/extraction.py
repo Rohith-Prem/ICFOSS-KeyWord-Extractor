@@ -19,7 +19,7 @@ for l in labels:
     else:
         i+=1
 
-print(keywords)
+print(keywords) #final keyword output
 
 
 #print(keywords)

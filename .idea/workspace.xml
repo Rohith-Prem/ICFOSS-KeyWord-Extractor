@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca5f7f91-c329-48bb-8f45-b44fa43e472e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Extraction/extraction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Extraction/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Features/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ICFOSS-KeyWord-Extractor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ICFOSS-KeyWord-Extractor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/feature_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/feature_extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/features.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/labelled_features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/labelled_features.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POSTagging/split_tagged.py" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/split_tagged.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tokenise/tokenise.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tokenise/tokenise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/extraction.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/Extraction/extraction.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -558,7 +548,7 @@
     <entry file="file://$PROJECT_DIR$/Extraction/extraction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
         </state>
       </provider>
     </entry>
