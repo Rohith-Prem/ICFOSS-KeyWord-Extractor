@@ -2,7 +2,7 @@
 
 from irtokz.indic_tokenize import tokenize_ind
 # noinspection PyUnresolvedReferences
-from sandhisplitter import Sandhisplitter
+#from sandhisplitter import Sandhisplitter
 
 inp_file = open("scrapped_text.txt", "r", encoding="utf-8").read()
 out_path = "E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\POSTagging\\tokenized_text.txt"
