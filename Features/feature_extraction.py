@@ -87,7 +87,7 @@ class FeatureExtractor:
         self.final_result = result
 
         #writing to features text file
-        f_out = open("features.txt", 'a', encoding='utf-8')
+        f_out = open("features.txt", 'w', encoding='utf-8')
         for value in result.values():
             wd = str(value[0])
             pos = str(value[1])

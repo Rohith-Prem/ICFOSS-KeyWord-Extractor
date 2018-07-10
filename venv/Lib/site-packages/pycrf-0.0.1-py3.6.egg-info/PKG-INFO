@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pycrf
+Version: 0.0.1
+Summary: a pure python library for conditional random field
+Home-page: https://github.com/himkt/pycrf
+Author: himkt
+Author-email: himkt@klis.tsukuba.ac.jp
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

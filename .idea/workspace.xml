@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca5f7f91-c329-48bb-8f45-b44fa43e472e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Extraction/extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/feature_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/feature_extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POSTagging/postagger.py" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/POStagger.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,12 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postagger.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/POSTagging/postagger.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="extraction.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="extraction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Extraction/extraction.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -51,11 +48,20 @@
       <file leaf-file-name="feature_extraction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+            <state relative-caret-position="153">
+              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="POStagger.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/POSTagging/POStagger.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -108,15 +114,16 @@
         <option value="$PROJECT_DIR$/POSTagging/irtokz/indic_tokenize.py" />
         <option value="$PROJECT_DIR$/final.py" />
         <option value="$PROJECT_DIR$/POSTagging/scratch.py" />
-        <option value="$PROJECT_DIR$/POSTagging/postagger.py" />
         <option value="$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py" />
         <option value="$PROJECT_DIR$/../Makri/Classifier/classifier.py" />
         <option value="$PROJECT_DIR$/scrap.py" />
         <option value="$PROJECT_DIR$/Tokenise/tokenise.py" />
         <option value="$PROJECT_DIR$/POSTagging/split_tagged.py" />
         <option value="$PROJECT_DIR$/Features/__init__.py" />
-        <option value="$PROJECT_DIR$/Features/feature_extraction.py" />
         <option value="$PROJECT_DIR$/Extraction/extraction.py" />
+        <option value="$PROJECT_DIR$/POSTagging/postagger.py" />
+        <option value="$PROJECT_DIR$/Features/feature_extraction.py" />
+        <option value="$PROJECT_DIR$/POSTagging/POStagger.py" />
       </list>
     </option>
   </component>
@@ -141,34 +148,7 @@
             <path>
               <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
               <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
-              <item name="Extraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
-              <item name="Features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
               <item name="POSTagging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
-              <item name="POSTagging" type="462c0819:PsiDirectoryNode" />
-              <item name="irtokz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
-              <item name="Tokenise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICFOSS-KeyWord-Extractor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICFOSS-KeyWord-Extractor" type="462c0819:PsiDirectoryNode" />
-              <item name="Tokenise" type="462c0819:PsiDirectoryNode" />
-              <item name="sandhisplitter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -178,7 +158,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="I:/Git/bin/git.exe" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -197,25 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.extraction">
-    <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ICFOSS-KeyWord-Extractor" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Makri/Classifier" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Makri/Classifier/classifier.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.postagger">
     <configuration name="extraction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ICFOSS-KeyWord-Extractor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,6 +209,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Features/feature_extraction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="postagger" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ICFOSS-KeyWord-Extractor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/POSTagging" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/POSTagging/postagger.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,17 +271,17 @@
     <list>
       <item itemvalue="Python.tokenise" />
       <item itemvalue="Python.feature_extraction" />
-      <item itemvalue="Python.classifier" />
       <item itemvalue="Python.scrap" />
       <item itemvalue="Python.extraction" />
+      <item itemvalue="Python.postagger" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.postagger" />
         <item itemvalue="Python.extraction" />
         <item itemvalue="Python.feature_extraction" />
         <item itemvalue="Python.scrap" />
         <item itemvalue="Python.tokenise" />
-        <item itemvalue="Python.classifier" />
       </list>
     </recent_temporary>
   </component>
@@ -322,12 +302,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24963397" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5014641" side_tool="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49853587" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49853587" weight="0.3290938" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -342,22 +322,22 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24963397" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49853587" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24963397" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49926794" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50073206" side_tool="true" weight="0.3290938" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5014641" side_tool="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Python Console" order="0" />
+      <window_info id="Favorites" order="0" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -386,7 +366,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/POSTagging/postagger.py">
+    <entry file="file://$PROJECT_DIR$/POSTagging/POStagger.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py">
@@ -502,16 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/POSTagging/split_tagged.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/POSTagging/postag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -525,9 +495,6 @@
     <entry file="file://$PROJECT_DIR$/Features/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/POSTagging/postagger.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tokenise/tokenise.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -535,20 +502,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Extraction/extraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/POSTagging/split_tagged.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+        <state relative-caret-position="153">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Extraction/extraction.py">
+    <entry file="file://$PROJECT_DIR$/POSTagging/POStagger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
