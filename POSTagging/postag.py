@@ -2,7 +2,6 @@ import requests
 import codecs
 from selenium import webdriver
 from bs4 import BeautifulSoup
-import codecs
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from selenium.common.exceptions import TimeoutException

@@ -10,7 +10,7 @@ text = in_file.read()
 words = text.split()
 # print(words)
 tokens = [tk.split('\\') for tk in words if '\\' in tk]
-# print(tokens)
+#print(tokens)
 tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX']  # nnn-1 nnnp-2 nnnst-3 verb-4
 keywords = dict()
 
@@ -89,12 +89,12 @@ class FeatureExtractor:
         #writing to features text file
         f_out = open("features.txt", 'w', encoding='utf-8')
         for value in result.values():
-            wd = str(value[0])
+            #wd = str(value[0])
             pos = str(value[1])
             tf = str(value[2])
             hu = str(value[3])
             dp = str(value[4])
-            line = wd + " " + pos + " " + tf + " " + hu + " " + dp
+            line = pos + " " + tf + " " + hu + " " + dp
             f_out.write(line+"\n")
 
 #if __name__ == '__main__':

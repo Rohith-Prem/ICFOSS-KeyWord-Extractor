@@ -8,6 +8,7 @@ out_file = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\tagged_split.
 language = "mal"
 tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
 text = tok.tokenize(in_file)
+print(text)
 out_file.write("%s" % text)
 
 

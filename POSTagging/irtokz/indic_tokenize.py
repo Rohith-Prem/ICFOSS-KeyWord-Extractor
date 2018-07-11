@@ -8,13 +8,13 @@ class tokenize_ind():
     def __init__(self, lang='mal', split_sen=True):
         self.lang = lang
         self.split_sen = split_sen
-        file_path = os.path.abspath(__file__).rpartition('/')[0]
+        #file_path = os.path.abspath(__file__).rpartition('/')[0]
 
         self.mal = True
 
         #load nonbreaking prefixes from file
         self.NBP = dict()
-        with open('%sdata/NONBREAKING_PREFIXES' % file_path) as fp:
+        with open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\POSTagging\irtokz\data\\NONBREAKING_PREFIXES") as fp:
             for line in fp:
                 if line.startswith('#'):
                     continue
@@ -59,8 +59,6 @@ class tokenize_ind():
         self.multihyphen = re.compile('(-+)')
         #restore multi-dots
         self.restoredots = re.compile(r'(DOT)(\1*)MULTI')
-        self.restoreviram = re.compile(r'(PNVM)(\1*)MULTI')
-        self.restoredviram = re.compile(r'(DGVM)(\1*)MULTI')
 
         #split sentences 
         self.splitsenir1 = re.compile(u' ([|.?\u0964\u0965]) ([\u0900-\u0d7f\u201c\u2018A-Z])')
@@ -137,12 +135,17 @@ class tokenize_ind():
         #seperate out "," except for Malayalam and Ascii digits
         text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
         text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
+        # remove dot from abbrevations
+        text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])-?([\u002e])', r'\1', text)
         #separate out on Malayalam characters followed by non-Malayalam characters
-        #text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1 \2', text)
+        text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1\\\2', text)
+        #seperate non malayalam followed by malayalam
         text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
         #seperate out Malayalam fraction symbols
         text = re.sub(u'([\u0d73\u0d74\u0d75])', r' \1 ', text)
-        
+
+
+
         #seperate out hyphens 
         text = self.multihyphen.sub(lambda m: r'%s' %(' '.join('-'*len(m.group(1)))), text) 
         text = re.sub(u'(-?[0-9\u0d66-\u0D72]-+[0-9\u0d66-\u0D72]-?){,}',lambda m: r'%s' %(m.group().replace('-', ' - ')), text)
