@@ -50,7 +50,7 @@ def main():
     # print("enter the link\n")
     # ll=input()
     head = ""
-    url1 = "http://www.mathrubhumi.com/news/kerala/malayalam/prof-t-j-joseph-abhimanyu-murder-maharajas-college-sfi-popular-front-sdpi-1.2945324"
+    url1 = "http://www.mathrubhumi.com/news/india/supre-court-may-decriminalise-gay-sex--1.2961845"
     getdata(url1)
 
     # print(getWordsFromURL(url1))
