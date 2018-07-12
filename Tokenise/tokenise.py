@@ -2,11 +2,10 @@
 
 from irtokz.indic_tokenize import tokenize_ind
 # noinspection PyUnresolvedReferences
-#from sandhisplitter import Sandhisplitter
+from sandhisplitter import Sandhisplitter
 
-inp_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/POSTagging/scrapped_text.txt", "r", encoding="utf-8").read()
-out_path = "/home/rohith/ICFOSS-KeyWord-Extractor/tokenized_text.txt"
-out_file = open(out_path, "w", encoding="utf-8")
+inp_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/scrapped_text.txt", "r", encoding="utf-8").read()
+out_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/tokenized_text.txt", "w", encoding="utf-8")
 wordcount = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/wordcount.txt", 'w')
 language = "mal"
 tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
@@ -17,20 +16,29 @@ text = tok.tokenize(inp_file)
 words = text.split()
 #print(words)
 tokens = [tk for tk in words if tk not in [".", ",", "'"]]
-number_of_words = len(tokens)
-print(number_of_words)
+
 
 #sandhi splitting
-#tokens = []
-#s = Sandhisplitter()
-#for w in tks:
-#    split = s.split(w)
-#    tokens.append(split[0])
+tks = []
+s = Sandhisplitter()
+for w in tokens:
+    split = s.split(w)
+    #print(split)
+    if len(split) == 2:
+        tks.append(split[0])
+        tks.append(split[1])
+    elif len(split) == 3:
+        wd = split[0] + split[1]
+        tks.append(wd)
+    elif len(split) == 1:
+        tks.append(split[0])
+print(tks)
 
-#print(tokens)
-for t in tokens:
+#print to output files
+for t in tks:
     out_file.write("%s\n" % t)
+number_of_words = len(tks)
+print(number_of_words)
 wordcount.write("%s\n" % str(number_of_words))
 
-out_file.close()
 wordcount.close()

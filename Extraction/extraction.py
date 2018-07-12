@@ -1,17 +1,20 @@
 from Features.feature_extraction import data
 
-input = open("/home/rohith/ICFOSS-KeyWord-Extractor/Extracion/output.txt", 'r').read()
-line = input.split('\n')
+f = open("/home/rohith/ICFOSS-KeyWord-Extractor/Extraction/output.txt", 'r').read()
+line = f.split('\n')
 feat = [l.split() for l in line]
+end = len(feat)-1
+feat.__delitem__(end)
 #print(feat)
 #print(len(feat))
+labels = []
 labels = [l[4] for l in feat]
 #print(labels)
 #print(len(labels))
 words = data()
 dictr = words.word_features
 #print(dictr)
-#print(len(dictr))
+print(len(dictr))
 keywords = []
 
 malwords = []

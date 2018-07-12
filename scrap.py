@@ -1,7 +1,6 @@
 import requests
 from selenium import webdriver
 from bs4 import BeautifulSoup
-import codecs
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from selenium.common.exceptions import TimeoutException
@@ -20,9 +19,9 @@ def getWordsFromURL(url):
     return re.compile(r'[\:/?=\-&]+', re.UNICODE).split(url)
 
 
-path = "E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\POSTagging"
-scrap = open('E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Tokenise\\scrapped_text.txt', 'w', encoding='utf-8')
-f = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\head_url.txt", 'w', encoding='utf-8')
+path = "/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging"
+scrap = open('/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/scrapped_text.txt', 'w', encoding='utf-8')
+f = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/head_url.txt", 'w', encoding='utf-8')
 driver = webdriver.Firefox(path)
 driver.get('http://olam.in/Transliterate/')
 
@@ -50,7 +49,7 @@ def main():
     # print("enter the link\n")
     # ll=input()
     head = ""
-    url1 = "http://www.mathrubhumi.com/news/kerala/joice-george-mp-plans-to-surrender-kottakamboor-controversy-land-1.2961839"
+    url1 = "http://www.mathrubhumi.com/news/kerala/one-priest-arrested-in-orthodox-rape-case-1.2964798"
     getdata(url1)
 
     # print(getWordsFromURL(url1))

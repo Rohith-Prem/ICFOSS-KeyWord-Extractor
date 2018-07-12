@@ -56,7 +56,7 @@ class FeatureExtractor:
         # print(result)
 
         # checking presence in heading and url
-        headurl = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\head_url.txt", 'r', encoding='utf-8').read()
+        headurl = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/head_url.txt", 'r', encoding='utf-8').read()
         headurl_words = headurl.split()
         # print(headurl_words)
         for key, value in result.items():
@@ -83,6 +83,7 @@ class FeatureExtractor:
             hu = str(value[3])
             dp = str(value[4])
             line = pos + " " + tf + " " + hu + " " + dp
+            #line = wd + " " + pos + " " + tf + " " + hu + " " + dp
             f_out.write(line+"\n")
 
 
