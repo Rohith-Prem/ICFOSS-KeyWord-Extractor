@@ -1,3 +1,3 @@
 import subprocess
 
-subprocess.call(['./.sh'])
+subprocess.call(['.//rohith/ICFOSS-KeyWord-Extractor/TnT/test.sh'])

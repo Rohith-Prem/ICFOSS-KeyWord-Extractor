@@ -1,8 +1,8 @@
 from irtokz.indic_tokenize import tokenize_ind
 import re
 
-in_file = open("tagged_text.txt", "r", encoding="utf-8").read()
-out_file = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\tagged_split.txt", "w", encoding="utf-8")
+in_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/tagged_text.txt", "r", encoding="utf-8").read()
+out_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/tagged_split.txt", "w", encoding="utf-8")
 #test_file = open("test.txt", "w", encoding="utf-8")
 
 language = "mal"

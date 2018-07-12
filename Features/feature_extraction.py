@@ -3,8 +3,8 @@ import re
 import csv
 
 
-in_file = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\tagged_split.txt", 'r', encoding='utf-8')
-number_of_words = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\wordcount.txt", 'r')
+in_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/tagged_split.txt", 'r', encoding='utf-8')
+number_of_words = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/wordcount.txt", 'r')
 text = in_file.read()
 # print(text)
 words = text.split()
@@ -25,19 +25,7 @@ class FeatureExtractor:
         for t in tokens:
             if t[1] in tag and len(t[0]) > 2:
                 keywords.setdefault(id, []).append(t[0])
-                if t[1] == "NNN":
-                    keywords.setdefault(id, []).append("NNN")
-                elif t[1] == "NNNP":
-                    keywords.setdefault(id, []).append("NNNP")
-                elif t[1] == "NNST":
-                    keywords.setdefault(id, []).append("NNST")
-                elif t[1] == "VVMVNF":
-                    keywords.setdefault(id, []).append("VVMVNF")
-                elif t[1] == "VVAUX":
-                    keywords.setdefault(id, []).append("VVAUX")
-                else:
-                    break
-                    # keywords.setdefault(id, []).append(5)
+                keywords.setdefault(id, []).append(t[1])
                 id += 1
 
         # print(keywords)
@@ -97,15 +85,11 @@ class FeatureExtractor:
             line = pos + " " + tf + " " + hu + " " + dp
             f_out.write(line+"\n")
 
-#if __name__ == '__main__':
-#    a = FeatureExtractor()
-#    a.main()
 
 class data:
     var = FeatureExtractor()
     var.main()
     word_features = var.final_result
-
 
 
 

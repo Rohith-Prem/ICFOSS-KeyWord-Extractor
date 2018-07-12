@@ -1,6 +1,6 @@
 from Features.feature_extraction import data
 
-input = open("output.txt", 'r').read()
+input = open("/home/rohith/ICFOSS-KeyWord-Extractor/Extracion/output.txt", 'r').read()
 line = input.split('\n')
 feat = [l.split() for l in line]
 #print(feat)

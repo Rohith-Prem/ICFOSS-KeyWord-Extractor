@@ -14,7 +14,7 @@ class tokenize_ind():
 
         #load nonbreaking prefixes from file
         self.NBP = dict()
-        with open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\POSTagging\irtokz\data\\NONBREAKING_PREFIXES") as fp:
+        with open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/irtokz/data/NONBREAKING_PREFIXES") as fp:
             for line in fp:
                 if line.startswith('#'):
                     continue

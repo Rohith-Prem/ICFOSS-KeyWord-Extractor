@@ -8,13 +8,13 @@ class tokenize_ind():
     def __init__(self, lang='mal', split_sen=True):
         self.lang = lang
         self.split_sen = split_sen
-        file_path = os.path.abspath(__file__).rpartition('/')[0]
+        #file_path = os.path.abspath(__file__).rpartition('/')[0]
 
         self.mal = True
 
         #load nonbreaking prefixes from file
         self.NBP = dict()
-        with open('%sdata/NONBREAKING_PREFIXES' % file_path) as fp:
+        with open('/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/data/NONBREAKING_PREFIXES' % file_path) as fp:
             for line in fp:
                 if line.startswith('#'):
                     continue

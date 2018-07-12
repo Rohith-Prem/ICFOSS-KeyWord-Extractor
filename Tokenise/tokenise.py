@@ -4,10 +4,10 @@ from irtokz.indic_tokenize import tokenize_ind
 # noinspection PyUnresolvedReferences
 #from sandhisplitter import Sandhisplitter
 
-inp_file = open("scrapped_text.txt", "r", encoding="utf-8").read()
-out_path = "E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\POSTagging\\tokenized_text.txt"
+inp_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/POSTagging/scrapped_text.txt", "r", encoding="utf-8").read()
+out_path = "/home/rohith/ICFOSS-KeyWord-Extractor/tokenized_text.txt"
 out_file = open(out_path, "w", encoding="utf-8")
-wordcount = open("E:\Work\ICFOSS\ICFOSS-KeyWord-Extractor\Features\\wordcount.txt", 'w')
+wordcount = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/wordcount.txt", 'w')
 language = "mal"
 tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
 text = tok.tokenize(inp_file)
