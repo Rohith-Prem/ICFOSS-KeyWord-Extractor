@@ -1,3 +1,5 @@
 import subprocess
 
-subprocess.call(['./predict.sh'])
+
+def predict():
+    subprocess.call(['./predict.sh'])

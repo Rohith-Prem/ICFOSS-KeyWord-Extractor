@@ -1,3 +1,5 @@
 import subprocess
+import os
 
-subprocess.call(['./test_shell.sh'])
+def postagger():
+    subprocess.call(['./test_shell.sh'])

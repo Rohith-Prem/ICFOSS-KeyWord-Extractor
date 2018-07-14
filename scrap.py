@@ -10,10 +10,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.common.exceptions import NoSuchElementException
+from xvfbwrapper import Xvfb
 import re
 
 from bs4 import BeautifulSoup
 
+#hiding web driver
+#display = Xvfb()
+#display.start()
 
 def getWordsFromURL(url):
     return re.compile(r'[\:/?=\-&]+', re.UNICODE).split(url)
@@ -45,11 +49,9 @@ def getdata(i):
         print("error")
 
 
-def main():
+def main(url1):
     # print("enter the link\n")
     # ll=input()
-    head = ""
-    url1 = "http://www.mathrubhumi.com/news/kerala/one-priest-arrested-in-orthodox-rape-case-1.2964798"
     getdata(url1)
 
     # print(getWordsFromURL(url1))
@@ -65,5 +67,6 @@ def main():
     f.write("\n" + mal_u)
 
 
-if __name__ == "__main__":
-    main()
+def scrapper(url):
+    main(url)
+    return 1
