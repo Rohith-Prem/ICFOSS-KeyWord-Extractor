@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca5f7f91-c329-48bb-8f45-b44fa43e472e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRF/features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CRF/features.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRF/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CRF/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extraction/extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extraction/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extraction/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/feature_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/feature_extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/features.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/head_url.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/head_url.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/tagged_split.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/tagged_split.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POSTagging/POStagger.py" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/POStagger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POSTagging/TnT/tokenized_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/TnT/tokenized_text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POSTagging/split_tagged.py" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/split_tagged.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POSTagging/tagged_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/tagged_text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POSTagging/tokenized_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/tokenized_text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tokenise/scrapped_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tokenise/scrapped_text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tokenise/tokenise.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tokenise/tokenise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyword_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrap.py" afterDir="false" />
-    </list>
+    <list default="true" id="ca5f7f91-c329-48bb-8f45-b44fa43e472e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +124,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="343" />
     <option name="width" value="682" />
     <option name="height" value="735" />
