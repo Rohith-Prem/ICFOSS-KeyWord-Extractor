@@ -8,7 +8,7 @@ feat.__delitem__(end)
 #print(feat)
 #print(len(feat))
 labels = []
-labels = [l[4] for l in feat]
+labels = [l[4] for l in feat[:-1] 
 #print(labels)
 #print(len(labels))
 words = data()
