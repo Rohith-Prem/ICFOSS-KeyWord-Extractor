@@ -1,7 +1,8 @@
-f = open("/home/rohith/ICFOSS-KeyWord-Extractor/Extraction/output.txt", 'r').read()
+file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Extraction/output.txt", 'r')
 
 
 def main(dictr):
+    f = file.read()
     line = f.split('\n')
     feat = [l.split() for l in line]
     end = len(feat)-1
@@ -9,7 +10,7 @@ def main(dictr):
     #print(feat)
     #print(len(feat))
     labels = []
-    labels = [l[4] for l in feat]
+    labels = [l[4] for l in feat[:-1]]
     #print(labels)
     #print(len(labels))
     #print(dictr)
@@ -31,6 +32,7 @@ def main(dictr):
             i+=1
             continue
 
+    file.close()
     print(keywords) #final keyword output
 
 

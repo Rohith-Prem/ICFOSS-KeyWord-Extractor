@@ -4,14 +4,10 @@ import csv
 
 
 in_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/tagged_split.txt", 'r', encoding='utf-8')
-f_out = open("features.txt", 'w', encoding='utf-8')
+f_out = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/features.txt", 'w', encoding='utf-8')
 
 
-text = in_file.read()
-# print(text)
-words = text.split()
-# print(words)
-tokens = [tk.split('\\') for tk in words if '\\' in tk]
+
 #print(tokens)
 tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX']  # nnn-1 nnnp-2 nnnst-3 verb-4
 keywords = dict()
@@ -19,6 +15,10 @@ final_result = dict()
 
 
 def main(wc):
+    text = in_file.read()
+    #print(text)
+    words = text.split()
+    tokens = [tk.split('\\') for tk in words if '\\' in tk]
     id = 1
     # filtering nouns and verbs and assigning priority
     for t in tokens:
@@ -55,7 +55,8 @@ def main(wc):
     # print(result)
 
     # checking presence in heading and url
-    headurl = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/head_url.txt", 'r', encoding='utf-8').read()
+    hurl = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/head_url.txt", 'r', encoding='utf-8')
+    headurl = hurl.read()
     #cleaning headurl
     headurl = headurl.replace(u'\u200D', '')  # ZERO_WIDTH_JOINER
     headurl = headurl.replace(u'\u200C', '')  # ZERO_WIDTH_NON_JOINER
@@ -63,7 +64,7 @@ def main(wc):
     headurl = headurl.replace(u'\u00A0', ' ')  # NO_BREAK_SPACE
 
     headurl_words = headurl.split()
-    print(headurl_words)
+    #print(headurl_words)
     for key, value in result.items():
         if value[0] in headurl_words:
             result.setdefault(key, []).append(1)
@@ -75,7 +76,7 @@ def main(wc):
     for key, values in result.items():
         depth = float(key/wordcount)
         result.setdefault(key, []).append(depth)
-    #print(result)
+    print(result)
 
     #writing to features text file
     for value in result.values():
@@ -87,6 +88,9 @@ def main(wc):
         line = pos + " " + tf + " " + hu + " " + dp
         #line = wd + " " + pos + " " + tf + " " + hu + " " + dp
         f_out.write(line+"\n")
+    hurl.close()
+    in_file.close()
+    f_out.close()
     return result
 
 

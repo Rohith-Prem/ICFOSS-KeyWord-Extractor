@@ -11,23 +11,21 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.common.exceptions import NoSuchElementException
 from xvfbwrapper import Xvfb
+import pyxvfb
 import re
-
 from bs4 import BeautifulSoup
 
-#hiding web driver
-#display = Xvfb()
-#display.start()
+display = Xvfb()
+display.start()
+driver = webdriver.Firefox()
+driver.get('http://olam.in/Transliterate/')
+scrap = open('/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/scrapped_text.txt', 'w', encoding='utf-8')
+f = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/head_url.txt", 'w', encoding='utf-8')
+
 
 def getWordsFromURL(url):
     return re.compile(r'[\:/?=\-&]+', re.UNICODE).split(url)
 
-
-path = "/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging"
-scrap = open('/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/scrapped_text.txt', 'w', encoding='utf-8')
-f = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/head_url.txt", 'w', encoding='utf-8')
-driver = webdriver.Firefox(path)
-driver.get('http://olam.in/Transliterate/')
 
 def getdata(i):
     url = str(i)
@@ -45,15 +43,13 @@ def getdata(i):
                 txt += t.text
             # filename = path + "\scrapped_text.txt"
             scrap.write(str(txt))
+            scrap.close()
     else:
         print("error")
 
 
 def main(url1):
-    # print("enter the link\n")
-    # ll=input()
     getdata(url1)
-
     # print(getWordsFromURL(url1))
     urls = getWordsFromURL(url1)
     # change this according to news url pattern
@@ -64,9 +60,15 @@ def main(url1):
             a.send_keys(u, Keys.ENTER)
             sleep(3)
     mal_u = a.get_attribute('value')
+    #display.stop()
     f.write("\n" + mal_u)
-
+    f.close()
+    return 1
 
 def scrapper(url):
-    main(url)
-    return 1
+    # hiding web driver
+    r = main(url)
+    print(r)
+    driver.close()
+    display.stop()
+    return r

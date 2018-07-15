@@ -1,28 +1,31 @@
 from subprocess import Popen
-from scrap import scrapper
-from Tokenise.tokenise import tokenizer
-from xvfbwrapper import Xvfb
+import subprocess
+import scrap
+from Tokenise import tokenise
 from time import sleep
-from POStagger import postagger
-from split_tagged import splitTagged
-from feature_extraction import featureExtractor
-from predict import predict
-from extraction import extraction
+from POSTagging import POStagger
+from POSTagging import split_tagged
+from Features import feature_extraction
+from Extraction import predict
+from Extraction import extraction
 
 
-link = "http://www.mathrubhumi.com/news/world/thai-cave-rescue-12-boys-and-coach-rescued-after-historical-ordeal-1.2959342"
-ret = 0
-ret = scrapper(link)
+link = "http://www.mathrubhumi.com/news/india/cong-is-a-party-for-muslim-men-modi-1.2970970"
+ret = scrap.scrapper(link)
+sleep(3)
 while ret:
-    wordcount = tokenizer()
+    wordcount = tokenise.tokenizer()
+    sleep(3)
+    POStagger.postagger()
+    sleep(3)
+    split_tagged.splitTagged()
+    sleep(3)
+    dic = feature_extraction.featureExtractor(wordcount)
+    sleep(3)
+    predict.predict()
+    sleep(3)
+    extraction.extraction(dic)
     ret = 0
-postagger()
-splitTagged()
-dic = featureExtractor(wordcount)
-predict()
-extraction(dic)
-
-
 
 
 

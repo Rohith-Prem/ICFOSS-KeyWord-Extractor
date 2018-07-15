@@ -45,9 +45,10 @@ class tokenize_ind():
         self.specascii = re.compile(r'([!@#$%^&*\',()_\-+={\[}\]|";:<>?`~/])')
         #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])")
         self.english = re.compile(r'([a-zA-Z])')
+        #remove dots
+        self.dots = re.compile(r'([.])')
 
-        #keep multiple dots together
-        #self.multidot = re.compile(r'(\.\.+)([^\.])')
+
         #split contractions right (both "'" and "’")
         self.numcs = re.compile(u"([0-9\u0966-\u096f])(['\u2019])s")
         self.aca = re.compile(u"([a-zA-Z\u0080-\u024f])(['\u2019])([a-zA-Z\u0080-\u024f])")
@@ -101,8 +102,7 @@ class tokenize_ind():
         text = self.ucurrency.sub('', text)
         #remove all "other" ASCII special characters
         text = self.specascii.sub('', text)
-        #remove English characters
-        text = self.english.sub('', text)
+
 
         #split contractions right (both "'" and "’")
         text = self.nacna.sub(r"\1 \2 \3", text)
@@ -113,32 +113,33 @@ class tokenize_ind():
         text = text.replace("''", " ' ' ")
 
         #handle non breaking prefixes
-        words = text.split()
-        text_len = len(words) - 1
-        text = str()
-        for i, word in enumerate(words):
-            if word.endswith('.'):
-                dotless = word[:-1]
-                if dotless.isdigit():
-                    word = dotless + '.'
-                    text += "%s" % word
-                elif ('.' in dotless and re.search('[a-zA-Z]', dotless)) or \
-                        self.NBP.get(dotless, 0) == 1 or (i < text_len and words[i + 1][0].islower()):
-                    text += "%s" % word
-                elif self.NBP.get(dotless, 0) == 2 and (i < text_len and words[i + 1][0].isdigit()):
-                    text += "%s " % word
-                elif i < text_len and words[i + 1][0].isdigit():
-                    text += "%s " % word
-                else:
-                    word = dotless + '.'
+        wrds = text.split()
+        text = ""
+        #print(wrds)
+        for w in wrds:
+            if '.' in w:
+                pass
             else:
-                text += "%s " % word
+                #remove English characters
+                w = self.english.sub('', w)
+            text += "%s " % w
+        #print(text)
+
+        words = text.split()
+        text = str()
+        for word in words:
+            if word.endswith('.'):
+                word = self.dots.sub('', word)
+            text += "%s " % word
+
+
 
         #seperate out "," except for Malayalam and Ascii digits
         text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
         text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
         #separate out on Malayalam characters followed by non-Malayalam characters
         #text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1 \2', text)
+        #separate out Non malayalam followed by malayalam
         #text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
         #seperate out Malayalam fraction symbols
         text = re.sub(u'([\u0d73\u0d74\u0d75])', r' \1 ', text)
