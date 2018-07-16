@@ -3,31 +3,45 @@ import re
 import csv
 
 
-in_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/tagged_split.txt", 'r', encoding='utf-8')
-f_out = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/features.txt", 'w', encoding='utf-8')
-
-
-
 #print(tokens)
-tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX']  # nnn-1 nnnp-2 nnnst-3 verb-4
+tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX', 'VVMVF']  # nnn-1 nnnp-2 nnnst-3 verb-4
 keywords = dict()
 final_result = dict()
 
 
 def main(wc):
+    in_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/tagged_split.txt", 'r', encoding='utf-8')
+    f_out = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/features.txt", 'w', encoding='utf-8')
+    wl = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/wordlist.txt", 'r', encoding='utf-8')
+    wordlist = wl.read()
+    wl.close()
+    allwords = wordlist.split('\n')
     text = in_file.read()
-    #print(text)
+    in_file.close()
     words = text.split()
     tokens = [tk.split('\\') for tk in words if '\\' in tk]
+    print(tokens)
     id = 1
-    # filtering nouns and verbs and assigning priority
+    # filtering nouns and verbs
     for t in tokens:
         if t[1] in tag and len(t[0]) > 2:
             keywords.setdefault(id, []).append(t[0])
-            keywords.setdefault(id, []).append(t[1])
+            if t[1] == "NNN":
+                keywords.setdefault(id, []).append("NNN")
+            elif t[1] == "NNNP":
+                keywords.setdefault(id, []).append("NNNP")
+            elif t[1] == "NNST":
+                keywords.setdefault(id, []).append("NNST")
+            elif t[1] == "VVMVNF":
+                keywords.setdefault(id, []).append("VVMVF")
+            elif t[1] == "VVAUX":
+                keywords.setdefault(id, []).append("VVAUX")
+            elif t[1] == "VVMVF":
+                keywords.setdefault(id, []).append("VVMVF")
+            else:
+                break
             id += 1
-
-    # print(keywords)
+    #print(keywords)
 
     # counting frequency
     for i in keywords.keys():
@@ -40,8 +54,10 @@ def main(wc):
                 count += 1
         keywords.setdefault(i, []).append(count)
     #print(keywords)
-    result = {}
+
+
     #deleting duplicates
+    result = {}
     for key, value in keywords.items():
         if value not in result.values():
             result[key] = value
@@ -74,7 +90,12 @@ def main(wc):
 
     #assigning depth
     for key, values in result.items():
-        depth = float(key/wordcount)
+        for i, check in enumerate(allwords):
+            if values[0] == check:
+                pos = i
+            else:
+                continue
+        depth = float(pos/wordcount)
         result.setdefault(key, []).append(depth)
     print(result)
 
@@ -89,7 +110,6 @@ def main(wc):
         #line = wd + " " + pos + " " + tf + " " + hu + " " + dp
         f_out.write(line+"\n")
     hurl.close()
-    in_file.close()
     f_out.close()
     return result
 
@@ -98,6 +118,9 @@ def featureExtractor(x):
     ret = main(x)
     return ret
 
+
+#if __name__ == '__main__':
+#    main(125)
 
 
 

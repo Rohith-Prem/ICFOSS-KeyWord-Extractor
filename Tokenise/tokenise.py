@@ -3,11 +3,11 @@ from sandhisplitter import Sandhisplitter
 
 inp_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Tokenise/scrapped_text.txt", "r", encoding="utf-8")
 out_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/tokenized_text.txt", "w", encoding="utf-8")
+allwords = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/wordlist.txt", "w", encoding='utf-8')
 
 
 def main():
     inp = inp_file.read()
-    inp_file.close()
     language = "mal"
     tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
     text = tok.tokenize(inp)
@@ -40,7 +40,10 @@ def main():
     #print to output files
     for t in tks:
         out_file.write("%s\n" % t)
+        allwords.write("%s\n" % t)
     out_file.close()
+    inp_file.close()
+    allwords.close()
 
     number_of_words = len(tks)
     print(number_of_words)

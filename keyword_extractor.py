@@ -10,7 +10,7 @@ from Extraction import predict
 from Extraction import extraction
 
 
-link = "http://www.mathrubhumi.com/news/india/cong-is-a-party-for-muslim-men-modi-1.2970970"
+link = "http://www.mathrubhumi.com/news/india/5-bodies-found-in-andhra-pradesh-lake-1.2614710"
 ret = scrap.scrapper(link)
 sleep(3)
 while ret:

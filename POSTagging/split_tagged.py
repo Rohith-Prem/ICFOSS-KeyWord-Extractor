@@ -16,12 +16,12 @@ def splitTagged():
     in_file.close()
     in_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/tagged_text.txt", "r", encoding="utf-8")
     inp = in_file.read()
+    in_file.close()
     language = "mal"
     tok = tokenize_ind(lang="'"+language+"'", split_sen=True)
     text = tok.tokenize(inp)
     print(text)
     out_file.write("%s" % text)
-    in_file.close()
     out_file.close()
 
 
