@@ -18,13 +18,15 @@ def main(wc):
     allwords = wordlist.split('\n')
     text = in_file.read()
     in_file.close()
-    words = text.split()
+    words = text.split('\n')
+    print(words)
     tokens = [tk.split('\\') for tk in words if '\\' in tk]
-    print(tokens)
+    #print(tokens)
     id = 1
     # filtering nouns and verbs
     for t in tokens:
-        if t[1] in tag and len(t[0]) > 2:
+        if t[1] in tag:
+            #print(t[0], t[1])
             keywords.setdefault(id, []).append(t[0])
             if t[1] == "NNN":
                 keywords.setdefault(id, []).append("NNN")
@@ -33,7 +35,7 @@ def main(wc):
             elif t[1] == "NNST":
                 keywords.setdefault(id, []).append("NNST")
             elif t[1] == "VVMVNF":
-                keywords.setdefault(id, []).append("VVMVF")
+                keywords.setdefault(id, []).append("VVMVNF")
             elif t[1] == "VVAUX":
                 keywords.setdefault(id, []).append("VVAUX")
             elif t[1] == "VVMVF":
@@ -55,6 +57,12 @@ def main(wc):
         keywords.setdefault(i, []).append(count)
     #print(keywords)
 
+    #max frequency
+    freqs = []
+    for k in keywords.values():
+        freqs.append(k[2])
+    maxfreq = max(freqs)
+    print(maxfreq)
 
     #deleting duplicates
     result = {}
@@ -63,10 +71,10 @@ def main(wc):
             result[key] = value
     #print(result)
 
-    # changing frequency to relative term frequency
+    # assigning term frequency
     wordcount = float(wc)
     for key, value in result.items():
-        tf = value[2] / wordcount
+        tf = value[2] / maxfreq
         result[key] = [value[0], value[1], tf]
     # print(result)
 
@@ -119,8 +127,8 @@ def featureExtractor(x):
     return ret
 
 
-#if __name__ == '__main__':
-#    main(125)
+if __name__ == '__main__':
+    main(125)
 
 
 

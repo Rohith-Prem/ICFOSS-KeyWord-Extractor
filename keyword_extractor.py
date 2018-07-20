@@ -1,5 +1,3 @@
-from subprocess import Popen
-import subprocess
 import scrap
 from Tokenise import tokenise
 from time import sleep
@@ -10,20 +8,20 @@ from Extraction import predict
 from Extraction import extraction
 
 
-link = "http://www.mathrubhumi.com/news/india/5-bodies-found-in-andhra-pradesh-lake-1.2614710"
+link = "http://www.mathrubhumi.com/news/kerala/kozhikode-accident-1.2981383"
 ret = scrap.scrapper(link)
-sleep(3)
+sleep(1)
 while ret:
     wordcount = tokenise.tokenizer()
-    sleep(3)
+    sleep(1)
     POStagger.postagger()
-    sleep(3)
+    sleep(1)
     split_tagged.splitTagged()
-    sleep(3)
+    sleep(1)
     dic = feature_extraction.featureExtractor(wordcount)
-    sleep(3)
+    sleep(1)
     predict.predict()
-    sleep(3)
+    sleep(1)
     extraction.extraction(dic)
     ret = 0
 

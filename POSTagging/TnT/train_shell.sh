@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-./tnt-para train.txt
+./tnt-para newmodel.txt

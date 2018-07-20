@@ -42,7 +42,7 @@ class tokenize_ind():
         # seperate out on unicode currency symbols
         self.ucurrency = re.compile(u'([\u20a0-\u20cf])')
         # seperate out all "other" ASCII special characters
-        self.specascii = re.compile(r'([!@#$%^&*\',()_\-+={\[}\]|";:<>?`~/])')
+        self.specascii = re.compile(r'([!@#$%^&*\'()_\-+={\[}\]|";:<>?`~/])')
         #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])")
         self.english = re.compile(r'([a-zA-Z])')
         #remove dots

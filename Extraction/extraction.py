@@ -9,8 +9,8 @@ def main(dictr):
     feat.__delitem__(end)
     #print(feat)
     #print(len(feat))
-    labels = []
     labels = [l[4] for l in feat[:-1]]
+    #labels = [l[5] for l in feat[:-1]]
     #print(labels)
     #print(len(labels))
     #print(dictr)
@@ -34,8 +34,11 @@ def main(dictr):
 
     file.close()
     print(keywords) #final keyword output
+    print(len(keywords))#no of keywords
 
 
 def extraction(d):
     main(d)
 
+#if __name__ == '__main__':
+#    main()

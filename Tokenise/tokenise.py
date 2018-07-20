@@ -15,30 +15,30 @@ def main():
 
     #tokenizing to words
     words = text.split()
-    tokens = [tk for tk in words if tk not in ["'"]]
-    #print(tokens)
+    tokens = [tk for tk in words if tk not in ["'" '.' ',']]
+    print(tokens)
 
     #sandhi splitting
-    tks = []
-    s = Sandhisplitter()
-    for w in tokens:
-        split = s.split(w)
-        #print(split)
-        if len(split) == 2:
-            if len(split[0]) <= 4:
-                #tks.append(split[0] + split[1])
-                tks.append(s.join(split))
-            else:
-                tks.append(split[0])
-        elif len(split) == 3:
-            wd = s.join(split[0:1])
-            tks.append(wd)
-        elif len(split) == 1:
-            tks.append(split[0])
-    print(tks)
+    #tks = []
+    #s = Sandhisplitter()
+    #for w in tokens:
+    #     split = s.split(w)
+    #     #print(split)
+    #     if len(split) == 2:
+    #         if len(split[0]) <= 4:
+    #             #tks.append(split[0] + split[1])
+    #             tks.append(s.join(split))
+    #         else:
+    #             tks.append(split[0])
+    #     elif len(split) == 3:
+    #         wd = s.join(split[0:1])
+    #         tks.append(wd)
+    #     elif len(split) == 1:
+    #         tks.append(split[0])
+    # print(tks)
 
     #print to output files
-    for t in tks:
+    for t in tokens:
         out_file.write("%s\n" % t)
         allwords.write("%s\n" % t)
     out_file.close()
