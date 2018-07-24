@@ -42,7 +42,7 @@ class tokenize_ind():
         # seperate out on unicode currency symbols
         self.ucurrency = re.compile(u'([\u20a0-\u20cf])')
         # seperate out all "other" ASCII special characters
-        self.specascii = re.compile(r'([!@#$%^&*\'()_\-+={\[}\]|";:<>?`~/])')
+        self.specascii = re.compile(r'([!@#$%^&*\'(),_\-+={\[}\]|";:<>?`~/])')
         #self.specascii = re.compile(u"([^\u0080-\U0010ffffa-zA-Z0-9\s\.',-])")
         self.english = re.compile(r'([a-zA-Z])')
         #remove dots
@@ -68,8 +68,7 @@ class tokenize_ind():
     def normalize(self, text):
         """
         Performs some common normalization, which includes: 
-            - Byte order mark, word joiner, etc. removal 
-            - ZERO_WIDTH_NON_JOINER and ZERO_WIDTH_JOINER removal 
+            - Byte order mark, word joiner, etc. removal
             - ZERO_WIDTH_SPACE and NO_BREAK_SPACE replaced by spaces 
         """
         text = text.replace(u'\uFEFF', '')     #BYTE_ORDER_MARK
@@ -118,7 +117,12 @@ class tokenize_ind():
         #print(wrds)
         for w in wrds:
             if '.' in w:
-                pass
+                if w[0].isalpha():
+                    pass
+                else:
+                    w = self.dots.sub(' ', w)
+                    #w = self.english.sub('', w)
+
             else:
                 #remove English characters
                 w = self.english.sub('', w)
@@ -129,14 +133,12 @@ class tokenize_ind():
         text = str()
         for word in words:
             if word.endswith('.'):
-                word = self.dots.sub('', word)
+                word = self.dots.sub(' ', word)
             text += "%s " % word
 
-
-
         #seperate out "," except for Malayalam and Ascii digits
-        text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
-        text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
+        #text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
+        #text = re.sub(u',([^0-9\u0d66-\u0d6f])', r' , \1', text)
         #separate out on Malayalam characters followed by non-Malayalam characters
         #text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1 \2', text)
         #separate out Non malayalam followed by malayalam

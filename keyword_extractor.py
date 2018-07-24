@@ -8,7 +8,7 @@ from Extraction import predict
 from Extraction import extraction
 
 
-link = "http://www.mathrubhumi.com/news/kerala/kozhikode-accident-1.2981383"
+link = "http://www.mathrubhumi.com/print-edition/kerala/kollam-1.2996137"
 ret = scrap.scrapper(link)
 sleep(1)
 while ret:

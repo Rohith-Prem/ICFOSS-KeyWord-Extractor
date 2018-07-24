@@ -20,12 +20,11 @@ def splitTagged():
     # reformatting tagged tokens
     text = inp
     # remove dot from abbrevations
-    text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])-?([\u002e])', r'\1', text)
+    #text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])-?([\u002e])', r'\1', text)
     text = text.replace('\t', "")
     text = text.replace('_', "")
-    text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])', r'\1\\\2',
-                  text)
-
+    text = re.sub(u'([\u0D00-\u0D65\u0D73-\u0D7f])([a-zA-Z])', r'\1 \2', text)
+    text = re.sub(u'([1234567890])([a-zA-Z])', r'\1 \2', text)
 
     out_file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Features/tagged_split.txt", "w", encoding="utf-8")
     #print(text)

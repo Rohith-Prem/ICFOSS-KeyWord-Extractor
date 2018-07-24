@@ -1,7 +1,7 @@
-%% n-grams created Wed Jul 18 12:48:05 2018 from file
+%% n-grams created Fri Jul 20 15:23:16 2018 from file
 %%     newmodel.txt
-%% the corpus contained 10898 words
-%% this file contains 202 uni-, 887 bi-, and 2593 trigrams
+%% the corpus contained 11091 words
+%% this file contains 195 uni-, 868 bi-, and 2566 trigrams
 __$	4
 	QT_QTC	2
 		JJ	1
@@ -27,10 +27,10 @@ QT_QTC	807
 		V_VAUX	2
 		N_NNP	6
 		V_VM	1
-	N_NN	359
+	N_NN	358
 		QT_QTC	20
 		JJ	18
-		N_NN	168
+		N_NN	167
 		PR_PRP	2
 		V_VM_VNF	37
 		PSP	11
@@ -82,7 +82,7 @@ QT_QTC	807
 		V_VAUX	1
 		N_NNP	1
 		RP_INTF	1
-	N_NST	11
+	N_NST	12
 		QT_QTC	1
 		N_NN	2
 		V_VM_VNF	1
@@ -90,7 +90,7 @@ QT_QTC	807
 		QT_QTF	1
 		V_VM_VF	2
 		V_VAUX	2
-		N_NNP	1
+		N_NNP	2
 	DM_DMD	43
 		QT_QTC	2
 		JJ	2
@@ -183,7 +183,7 @@ QT_QTC	807
 		N_NNP	1
 	V_VN_O_NU	1
 		V_VAUX	1
-JJ	610
+JJ	611
 	QT_QTC	9
 		N_NN	4
 		DM_DMD	2
@@ -201,13 +201,13 @@ JJ	610
 		V_VAUX	4
 		N_NNP	2
 		‍N_NN	3
-	N_NN	355
+	N_NN	356
 		QT_QTC	17
 		JJ	26
 		N_NN	136
 		RD_PUNC	1
 		PR_PRP	4
-		V_VM_VNF	54
+		V_VM_VNF	55
 		PSP	2
 		N_NST	4
 		DM_DMD	6
@@ -326,12 +326,12 @@ JJ	610
 		‍N_NN	1
 	‍ക്കൂരയ്ക്കു	1
 		V_VM_VNF	1
-	???	1
-		‍N_NN	1
 	‍സൺ	1
 		V_VAUX	1
 	൭N_NN	1
 		N_NN	1
+	???	1
+		‍N_NN	1
 	‍CC_CCD	1
 		N_NN	1
 	‍വ	1
@@ -342,7 +342,7 @@ JJ	610
 		‍N_NN	1
 	NN	1
 		N_NNP	1
-N_NN	4049
+N_NN	4173
 	QT_QTC	210
 		QT_QTC	9
 		JJ	11
@@ -384,24 +384,24 @@ N_NN	4049
 		‍PR_PRC	1
 		‍ശയ്ക്ക്	1
 		NN	1
-	N_NN	1538
+	N_NN	1613
 		QT_QTC	102
 		JJ	74
-		N_NN	573
+		N_NN	613
 		RD_PUNC	3
 		PR_PRP	10
-		V_VM_VNF	222
+		V_VM_VNF	247
 		PSP	38
 		N_NST	20
 		DM_DMD	18
 		QT_QTF	9
 		V_VM_VF	86
 		CC_CCD	9
-		RB	30
+		RB	31
 		V_VM_VINF	16
 		RP_NEG	2
-		V_VAUX	103
-		N_NNP	92
+		V_VAUX	107
+		N_NNP	97
 		RD_ECH	1
 		V_VM_VNF_INF	1
 		RP_RPD	5
@@ -419,7 +419,7 @@ N_NN	4049
 		V_VNF	1
 		PR_PRL	1
 		‍N_NNP	2
-		‍N_NN	45
+		‍N_NN	47
 		‍മക്കളും	1
 		V	1
 		‍N_NST	4
@@ -429,8 +429,6 @@ N_NN	4049
 		‍DM_DMD	2
 		‍ത്ത	2
 		‍ത്താന്	1
-		‍ക്ക്	1
-		‍മിച്ച	1
 		‍കിയിട്ടുണ്ട്	1
 		‍ന്ന്	1
 		‍കുന്ന	1
@@ -443,10 +441,10 @@ N_NN	4049
 		‍ഷകര്	1
 		‍മോണ്	1
 		‍ജുലു	1
-		‍മാണ	1
 		‍ട്രോൾ	1
 		‍ത്തികമാക്കുന്നത്	1
 		‍ഡില്	1
+		N-NN	1
 	RD_PUNC	6
 		QT_QTC	1
 		JJ	2
@@ -463,15 +461,15 @@ N_NN	4049
 		V_VAUX	1
 		N_NNP	2
 		‍N_NN	1
-	V_VM_VNF	605
+	V_VM_VNF	637
 		QT_QTC	53
 		JJ	54
-		N_NN	203
+		N_NN	224
 		RD_PUNC	2
 		PR_PRP	9
-		V_VM_VNF	72
+		V_VM_VNF	75
 		PSP	2
-		N_NST	5
+		N_NST	6
 		DM_DMD	9
 		QT_QTF	5
 		V_VM_VF	25
@@ -479,15 +477,15 @@ N_NN	4049
 		RB	13
 		V_VM_VINF	4
 		RP_NEG	2
-		V_VAUX	23
-		N_NNP	46
+		V_VAUX	25
+		N_NNP	49
 		RP_RPD	8
 		RP_INTF	4
 		PR_PRF	1
 		DM_DMQ	1
 		V_VM	2
 		DM_DMR	2
-		‍N_NNP	7
+		‍N_NNP	8
 		‍N_NN	37
 		‍നിന്ന്	1
 		‍JJ	2
@@ -500,6 +498,7 @@ N_NN	4049
 		‍ക്ക്	2
 		V_VM_V	1
 		‍ക്കാര്	1
+		‍ഷങ്ങളില്	1
 		‍കൃഷി	1
 		V_VM_VNG	1
 	PSP	81
@@ -519,11 +518,11 @@ N_NN	4049
 		‍N_NN	5
 		‍ഷക	1
 		‍QT	1
-	N_NST	54
+	N_NST	56
 		QT_QTC	2
 		JJ	5
-		N_NN	25
-		V_VM_VNF	5
+		N_NN	26
+		V_VM_VNF	6
 		PSP	2
 		QT_QTF	1
 		V_VM_VF	2
@@ -584,11 +583,11 @@ N_NN	4049
 		N_NNP	1
 		DM_DMQ	1
 		QT	1
-	RB	69
+	RB	70
 		QT_QTC	6
 		JJ	2
 		N_NN	12
-		V_VM_VNF	18
+		V_VM_VNF	19
 		V_VM_VF	7
 		V_VAUX	11
 		N_NNP	3
@@ -618,35 +617,35 @@ N_NN	4049
 		DM_DMD	1
 		CC_CCD	1
 		‍N_NN	1
-	V_VAUX	251
+	V_VAUX	259
 		QT_QTC	60
 		JJ	10
-		N_NN	77
+		N_NN	81
 		PR_PRP	4
-		V_VM_VNF	28
+		V_VM_VNF	29
 		N_NST	4
 		DM_DMD	3
 		V_VM_VF	1
 		RB	2
 		V_VAUX	2
-		N_NNP	33
+		N_NNP	35
 		RP_RPD	1
 		RP_INTF	1
 		DM_DMQ	1
 		V_VM	2
 		V_VN	1
 		‍N_NNP	6
-		‍N_NN	10
+		‍N_NN	11
 		‍V_VM_VNF	1
 		‍PSP	1
 		‍CC_CCD	1
 		‍ട്ട്	1
 		‍മ്മാതാക്കള്	1
-	N_NNP	266
+	N_NNP	274
 		QT_QTC	15
 		JJ	8
-		N_NN	110
-		V_VM_VNF	17
+		N_NN	118
+		V_VM_VNF	18
 		PSP	11
 		N_NST	2
 		QT_QTF	3
@@ -696,9 +695,9 @@ N_NN	4049
 		JJ	1
 		V_VN	1
 		‍N_NN	1
-	CC_CCS	8
+	CC_CCS	7
 		N_NN	3
-		V_VM_VNF	2
+		V_VM_VNF	1
 		N_NNP	1
 		PR_PRQ	1
 		‍N_NN	1
@@ -763,9 +762,9 @@ N_NN	4049
 		‍N_NNP	1
 		‍തോതില്	1
 		‍N_NN	2
-	‍N_NN	139
+	‍N_NN	141
 		JJ	9
-		N_NN	35
+		N_NN	36
 		V_VM_VNF	41
 		PSP	1
 		DM_DMD	3
@@ -775,7 +774,7 @@ N_NN	4049
 		N_NNP	6
 		RP_RPD	2
 		‍N_NNP	1
-		‍N_NN	13
+		‍N_NN	14
 		‍ഷകനാണ്	1
 		‍N_NST	1
 		‍V_VM_VNF	4
@@ -840,21 +839,12 @@ N_NN	4049
 		N_NN	1
 	‍ത്താന്	1
 		‍N_NN	1
-	‍ക്ക്	3
+	‍ക്ക്	2
 		N_NN	2
-		RB	1
 	‍ഥിനിയായ	1
 		N_NN	1
 	‍ഷര്	1
 		V_VM_VNF	1
-	‍ഷകന്	1
-		V_VM_VNF	1
-	‍ഷകരാണ്	1
-		‍N_NN	1
-	‍കിയാണ്	1
-		V_VM_VNF	1
-	‍മിച്ച	1
-		‍N_NN	1
 	‍കിയിട്ടുണ്ട്	1
 		V_VAUX	1
 	‍കുഞ്ഞുങ്ങളെ	1
@@ -930,8 +920,6 @@ N_NN	4049
 		V_VAUX	1
 	‍‍റെനോ	1
 		N_NN	1
-	‍മാണ	1
-		‍N_NN	1
 	‍ട്രോൾ	1
 		QT	1
 	‍ത്തികമാക്കുന്നത്	1
@@ -940,6 +928,10 @@ N_NN	4049
 		N_NNP	1
 	‍ഡില്	1
 		N_NN	1
+	V_VM-VNF	1
+		V_VAUX	1
+	N-NN	1
+		V_VM_VNF	1
 RD_PUNC	20
 	QT_QTC	5
 		N_NN	3
@@ -1012,7 +1004,7 @@ PR_PRP	79
 		N_NNP	1
 	‍N_NN	1
 		N_NN	1
-V_VM_VNF	1347
+V_VM_VNF	1388
 	QT_QTC	109
 		QT_QTC	7
 		JJ	10
@@ -1031,7 +1023,7 @@ V_VM_VNF	1347
 		V_VAUX	1
 		N_NNP	19
 		V_VN_O_NU	1
-	JJ	102
+	JJ	103
 		QT_QTC	3
 		JJ	8
 		N_NN	52
@@ -1041,16 +1033,16 @@ V_VM_VNF	1347
 		V_VAUX	10
 		N_NNP	5
 		‍N_NNP	1
-		‍N_NN	12
+		‍N_NN	13
 		‍QT_QTF	1
 		‍V_VM_VNF	1
-	N_NN	456
+	N_NN	482
 		QT_QTC	18
 		JJ	24
-		N_NN	165
+		N_NN	184
 		RD_PUNC	1
 		PR_PRP	5
-		V_VM_VNF	77
+		V_VM_VNF	81
 		PSP	7
 		N_NST	4
 		DM_DMD	5
@@ -1059,8 +1051,8 @@ V_VM_VNF	1347
 		RB	6
 		V_VM_VINF	3
 		RP_NEG	1
-		V_VAUX	34
-		N_NNP	23
+		V_VAUX	35
+		N_NNP	25
 		RP_INTF	3
 		PR_PRF	1
 		V_VM	3
@@ -1076,13 +1068,13 @@ V_VM_VNF	1347
 		‍ക്കും	1
 		‍DM_DMD	1
 		‍സ്	1
-		‍ഷകന്	1
 		‍ക്കാറും	1
 		‍ത്തകയും	1
 		‍ക്കൂടി	1
 		‍ത്തന്നെ	1
 		‍ഭിണിയായ	1
 		‍ലൈന്	1
+		V_VM-VNF	1
 	RD_PUNC	4
 		QT_QTC	3
 		N_NN	1
@@ -1092,12 +1084,12 @@ V_VM_VNF	1347
 		N_NN	8
 		V_VM_VNF	2
 		N_NNP	1
-	V_VM_VNF	158
+	V_VM_VNF	163
 		QT_QTC	9
 		JJ	8
-		N_NN	54
+		N_NN	55
 		PR_PRP	1
-		V_VM_VNF	23
+		V_VM_VNF	25
 		PSP	1
 		DM_DMD	2
 		QT_QTF	2
@@ -1106,8 +1098,8 @@ V_VM_VNF	1347
 		RB	4
 		V_VM_VINF	1
 		RP_NEG	2
-		V_VAUX	12
-		N_NNP	7
+		V_VAUX	13
+		N_NNP	8
 		RP_RPD	1
 		RP_INTF	1
 		‍N_NNP	5
@@ -1127,9 +1119,9 @@ V_VM_VNF	1347
 		DM_DMD	1
 		RB	1
 		N_NNP	2
-	N_NST	11
+	N_NST	12
 		JJ	2
-		N_NN	5
+		N_NN	6
 		V_VM_VNF	1
 		V_VAUX	1
 		N_NNP	1
@@ -1166,7 +1158,7 @@ V_VM_VNF	1347
 	RB	29
 		JJ	1
 		N_NN	3
-		V_VM_VNF	10
+		V_VM_VNF	11
 		V_VM_VF	4
 		RB	1
 		V_VM_VINF	2
@@ -1174,7 +1166,6 @@ V_VM_VNF	1347
 		N_NNP	1
 		DM_DMQ	1
 		‍N_NN	2
-		‍ക്കുന്ന	1
 		‍V_VM_VNF	1
 		‍ദ	1
 	V_VM_VINF	6
@@ -1183,20 +1174,20 @@ V_VM_VNF	1347
 	RP_NEG	4
 		QT_QTC	1
 		N_NN	3
-	V_VAUX	62
+	V_VAUX	65
 		QT_QTC	13
 		JJ	4
-		N_NN	20
+		N_NN	21
 		V_VM_VNF	8
 		DM_DMD	1
 		CC_CCD	1
 		RB	2
-		N_NNP	7
+		N_NNP	9
 		‍N_NN	6
-	N_NNP	93
+	N_NNP	98
 		QT_QTC	3
 		JJ	6
-		N_NN	31
+		N_NN	34
 		RD_PUNC	2
 		V_VM_VNF	9
 		PSP	1
@@ -1204,8 +1195,8 @@ V_VM_VNF	1347
 		DM_DMD	1
 		CC_CCD	1
 		RB	1
-		V_VAUX	2
-		N_NNP	17
+		V_VAUX	3
+		N_NNP	18
 		RD_ECH	1
 		DM_DMR	1
 		‍N_NNP	6
@@ -1230,8 +1221,8 @@ V_VM_VNF	1347
 	PR_PRF	2
 		N_NN	1
 		N_NST	1
-	CC_CCS	1
-		V_VM_VNF	1
+	CC_CCS	2
+		V_VM_VNF	2
 	DM_DMQ	3
 		N_NN	1
 		RP_NEG	1
@@ -1344,8 +1335,6 @@ V_VM_VNF	1347
 		V_VAUX	1
 	‍‍പെട്രോള്	1
 		‍N_NN	1
-	‍ദ	1
-		N_NNP	1
 	V_VM_VNG	1
 		N_NN	1
 PSP	144
@@ -1433,7 +1422,7 @@ PSP	144
 		N_NN	1
 	‍QT	1
 		PR_PRQ	1
-N_NST	124
+N_NST	128
 	QT_QTC	6
 		JJ	1
 		N_NN	3
@@ -1442,9 +1431,9 @@ N_NST	124
 	JJ	9
 		N_NN	8
 		V_VM_VNF	1
-	N_NN	53
+	N_NN	55
 		JJ	2
-		N_NN	27
+		N_NN	29
 		V_VM_VNF	9
 		QT_QTF	1
 		V_VM_VF	3
@@ -1458,10 +1447,10 @@ N_NST	124
 		V_VN	1
 	PR_PRP	1
 		V_VM_VNF	1
-	V_VM_VNF	13
+	V_VM_VNF	14
 		QT_QTC	1
 		JJ	2
-		N_NN	3
+		N_NN	4
 		V_VM_VNF	1
 		V_VAUX	2
 		N_NNP	1
@@ -1492,9 +1481,9 @@ N_NST	124
 		N_NNP	1
 		V_VN	1
 		‍V_VM_VNF	1
-	N_NNP	14
+	N_NNP	15
 		QT_QTC	1
-		N_NN	9
+		N_NN	10
 		V_VM_VNF	1
 		PSP	1
 		N_NNP	1
@@ -1515,10 +1504,10 @@ DM_DMD	154
 		N_NN	2
 		N_NNP	2
 		‍N_NN	1
-	N_NN	68
+	N_NN	69
 		QT_QTC	8
 		JJ	3
-		N_NN	24
+		N_NN	25
 		V_VM_VNF	12
 		PSP	2
 		N_NST	1
@@ -1598,8 +1587,6 @@ DM_DMD	154
 		N_NNP	1
 	‍മാണത്തില്	1
 		V_VAUX	1
-	???	1
-		N_NN	1
 	‍V_VM_VNF_INF	1
 		RP_NEG	1
 QT_QTF	89
@@ -1805,7 +1792,7 @@ CC_CCD	74
 		JJ	1
 	‍ക്കുവേണ്ടി	1
 		RP_RPD	1
-RB	179
+RB	180
 	QT_QTC	7
 		N_NN	5
 		DM_DMD	1
@@ -1814,18 +1801,18 @@ RB	179
 		N_NN	4
 		‍N_NN	1
 	N_NN	26
-		N_NN	12
+		N_NN	13
 		PR_PRP	1
 		V_VM_VNF	5
 		N_NST	1
 		V_VM_VF	1
 		V_VAUX	2
-		N_NNP	2
+		N_NNP	1
 		V_VM	1
 		‍N_NN	1
-	V_VM_VNF	64
+	V_VM_VNF	65
 		QT_QTC	5
-		JJ	5
+		JJ	6
 		N_NN	27
 		V_VM_VNF	5
 		PSP	1
@@ -1878,20 +1865,17 @@ RB	179
 	‍N_NN	13
 		JJ	1
 		N_NN	1
-		V_VM_VNF	4
+		V_VM_VNF	5
 		V_VAUX	1
 		N_NNP	2
 		‍N_NN	1
 		‍ഡ്	1
-		‍വാര്	1
 		‍തന്നെ	1
 	‍നിന്ന്	1
 		‍N_NN	1
-	‍ക്കുന്ന	1
-		JJ	1
-	‍V_VM_VNF	7
+	‍V_VM_VNF	8
 		N_NN	1
-		V_VM_VNF	3
+		V_VM_VNF	4
 		V_VAUX	1
 		N_NNP	1
 		‍മാണച്ചെലവും	1
@@ -1963,7 +1947,7 @@ RP_NEG	15
 		JJ	1
 	‍ച്ച	1
 		N_NN	1
-V_VAUX	546
+V_VAUX	560
 	QT_QTC	115
 		QT_QTC	4
 		JJ	5
@@ -1984,21 +1968,21 @@ V_VAUX	546
 		V_VAUX	1
 		N_NNP	2
 		‍N_NN	3
-	N_NN	167
+	N_NN	175
 		QT_QTC	4
 		JJ	10
-		N_NN	65
+		N_NN	70
 		PR_PRP	1
 		V_VM_VNF	29
 		PSP	3
-		N_NST	2
+		N_NST	3
 		DM_DMD	4
 		V_VM_VF	3
 		CC_CCD	1
 		RB	3
 		V_VM_VINF	1
 		V_VAUX	4
-		N_NNP	14
+		N_NNP	15
 		DM_DMR	1
 		CC_CCS_UT	2
 		‍N_NNP	4
@@ -2010,7 +1994,7 @@ V_VAUX	546
 		N_NN	3
 		V_VM_VNF	1
 		V_VM_VF	1
-	V_VM_VNF	66
+	V_VM_VNF	67
 		QT_QTC	10
 		JJ	6
 		N_NN	21
@@ -2020,7 +2004,7 @@ V_VAUX	546
 		DM_DMD	1
 		RB	1
 		V_VM_VINF	1
-		N_NNP	3
+		N_NNP	4
 		DM_DMQ	1
 		‍N_NNP	1
 		‍N_NN	7
@@ -2035,11 +2019,10 @@ V_VAUX	546
 		N_NN	3
 		V_VM_VF	1
 	DM_DMD	6
-		N_NN	2
+		N_NN	3
 		PR_PRP	1
 		V_VM_VNF	1
 		‍N_NN	1
-		???	1
 	QT_QTF	4
 		V_VM_VNF	1
 		RB	1
@@ -2063,17 +2046,17 @@ V_VAUX	546
 		V_VM_VNF	1
 		‍N_NN	1
 		‌N_NN	1
-	N_NNP	69
+	N_NNP	73
 		QT_QTC	3
 		JJ	5
-		N_NN	30
+		N_NN	32
 		V_VM_VNF	4
 		QT_QTF	1
 		V_VM_VF	1
 		CC_CCD	1
 		RB	4
-		V_VAUX	1
-		N_NNP	11
+		V_VAUX	2
+		N_NNP	12
 		QT_QTO	1
 		‍N_NNP	2
 		‍N_NN	4
@@ -2102,8 +2085,8 @@ V_VAUX	546
 		V_VM_VNF	2
 		N_NNP	1
 		‍സിങ്	1
-	‍N_NN	30
-		JJ	1
+	‍N_NN	31
+		JJ	2
 		N_NN	8
 		V_VM_VNF	6
 		N_NST	1
@@ -2139,14 +2122,14 @@ V_VAUX	546
 		N_NN	1
 	‍മ്മാതാക്കള്	1
 		N_NN	1
-N_NNP	1080
+N_NNP	1099
 	QT_QTC	44
 		QT_QTC	3
 		JJ	2
-		N_NN	20
+		N_NN	19
 		PR_PRP	1
 		V_VM_VNF	4
-		N_NST	2
+		N_NST	3
 		RB	1
 		V_VAUX	1
 		N_NNP	10
@@ -2159,26 +2142,25 @@ N_NNP	1080
 		V_VAUX	6
 		N_NNP	2
 		‍N_NN	3
-	N_NN	421
+	N_NN	435
 		QT_QTC	19
 		JJ	28
-		N_NN	163
+		N_NN	172
 		RD_PUNC	1
 		PR_PRP	3
-		V_VM_VNF	53
+		V_VM_VNF	55
 		PSP	9
-		N_NST	4
+		N_NST	5
 		DM_DMD	2
 		QT_QTF	7
 		V_VM_VF	25
 		CC_CCD	5
 		RB	5
 		V_VM_VINF	3
-		V_VAUX	33
-		N_NNP	40
+		V_VAUX	35
+		N_NNP	41
 		RP_RPD	1
 		RP_INTF	1
-		CC_CCS	1
 		QT_QTO	1
 		N_NNV	1
 		V_VN	2
@@ -2192,10 +2174,10 @@ N_NNP	1080
 	RD_PUNC	3
 		N_NN	2
 		N_NNP	1
-	V_VM_VNF	60
+	V_VM_VNF	62
 		QT_QTC	8
 		JJ	3
-		N_NN	21
+		N_NN	23
 		V_VM_VNF	1
 		PSP	1
 		N_NST	1
@@ -2259,9 +2241,9 @@ N_NNP	1080
 		V_VM_VF	1
 	RP_NEG	1
 		N_NN	1
-	V_VAUX	34
+	V_VAUX	36
 		QT_QTC	8
-		N_NN	10
+		N_NN	12
 		V_VM_VNF	4
 		QT_QTF	1
 		CC_CCD	1
@@ -2270,11 +2252,11 @@ N_NNP	1080
 		V_VN	1
 		‍N_NNP	1
 		‍ശന	1
-	N_NNP	264
+	N_NNP	266
 		QT_QTC	9
 		JJ	7
-		N_NN	83
-		V_VM_VNF	7
+		N_NN	84
+		V_VM_VNF	8
 		PSP	4
 		N_NST	1
 		DM_DMD	5
@@ -2814,9 +2796,9 @@ PR_PRL	3
 	V_VM_VNF	1
 		‍N_NNP	1
 ‍N_NN	493
-	JJ	36
+	JJ	37
 		JJ	1
-		N_NN	13
+		N_NN	14
 		V_VM_VNF	1
 		N_NST	1
 		V_VAUX	5
@@ -2834,14 +2816,13 @@ PR_PRL	3
 		N_NST	1
 		CC_CCD	1
 		RB	2
-		V_VAUX	9
+		V_VAUX	10
 		N_NNP	1
 		CC_CCS	1
 		‍N_NN	11
 		‍ക്കുന്നു	1
 		‍V_VM_VNF	4
 		‍DM_DMD	1
-		‍ഷകരാണ്	1
 		‍കുഞ്ഞുങ്ങളെ	1
 		‌N_NN	1
 		‍ദി	1
@@ -2850,9 +2831,9 @@ PR_PRL	3
 		‍RP_CL	1
 		‍മാരും	1
 		‍ബീ	1
-	V_VM_VNF	141
+	V_VM_VNF	142
 		JJ	11
-		N_NN	49
+		N_NN	50
 		PR_PRP	1
 		V_VM_VNF	21
 		PSP	1
@@ -2863,6 +2844,7 @@ PR_PRL	3
 		V_VAUX	9
 		N_NNP	5
 		PR_PRF	1
+		CC_CCS	1
 		‍N_NNP	5
 		‍N_NN	16
 		‍നിന്ന്	1
@@ -2872,7 +2854,6 @@ PR_PRL	3
 		‍CC_CCS	1
 		‍ത്താന്	1
 		‍‍പെട്രോള്	1
-		‍ദ	1
 	PSP	2
 		N_NN	1
 		‍N_NN	1
@@ -2885,14 +2866,14 @@ PR_PRL	3
 		‍N_NN	1
 	QT_QTF	2
 		‍N_NN	2
-	RB	20
+	RB	21
 		JJ	1
 		N_NN	3
 		V_VM_VNF	7
 		RB	1
 		V_VAUX	1
 		‍N_NN	5
-		‍V_VM_VNF	2
+		‍V_VM_VNF	3
 	V_VAUX	29
 		JJ	1
 		N_NN	7
@@ -2939,7 +2920,7 @@ PR_PRL	3
 		N_NN	9
 		V_VM_VNF	20
 		N_NST	1
-		RB	1
+		RB	2
 		V_VAUX	2
 		N_NNP	3
 		RP_INTF	1
@@ -2947,7 +2928,6 @@ PR_PRL	3
 		‍N_NNP	2
 		‍N_NN	6
 		‍V_VM_VNF	1
-		‍ണ്ണമായും	1
 		‍സെറ്റ്	1
 	DM	1
 		‍നിന്നാണ്	1
@@ -2974,18 +2954,12 @@ PR_PRL	3
 		‍N_NN	2
 	‍ക്ക്	1
 		N_NN	1
-	‍വാര്	1
-		V_VM_VNF	1
-	‍പ്പ്	1
-		‍പ്പെട്ട	1
-	???	1
-		JJ	1
-	‍ണ്ണമായും	1
-		‍V_VM_VNF	1
 	‍സെറ്റ്	1
 		PSP	1
 	‍കുന്നത്	1
 		‍കുന്ന	1
+	???	1
+		JJ	1
 	‍CC_CCD	1
 		N_NST	1
 	‍ഷികവിളയെ	1
@@ -3088,9 +3062,7 @@ V	2
 		V_VAUX	1
 	‍ണ	1
 		JJ	1
-‍ക്കുന്ന	3
-	JJ	1
-		‍N_NN	1
+‍ക്കുന്ന	2
 	N_NN	1
 		N_NN	1
 	‍V_VM_VNF	1
@@ -3291,7 +3263,7 @@ QT	7
 		‍N_NNP	1
 	‍N_NN	1
 		N_NNP	1
-‍ക്ക്	10
+‍ക്ക്	9
 	JJ	1
 		N_NN	1
 	N_NN	4
@@ -3302,8 +3274,8 @@ QT	7
 	V_VM_VNF	2
 		N_NNP	1
 		‍V_VM_VNF	1
-	RB	2
-		V_VM_VNF	2
+	RB	1
+		V_VM_VNF	1
 	‍V_VM_VNF	1
 		RB	1
 V_VM_V	1
@@ -3326,40 +3298,12 @@ V_VM_V	1
 ‍പ്പെടുത്തി	1
 	N_NN	1
 		JJ	1
-‍വാര്	1
-	V_VM_VNF	1
-		N_NN	1
-‍ഷകന്	1
-	V_VM_VNF	1
-		‍ഷങ്ങളില്	1
 ‍ഷങ്ങളില്	1
 	V_VAUX	1
 		QT_QTF	1
 ‍ഷക	1
 	N_NN	1
 		N_NNP	1
-‍ഷകരാണ്	1
-	‍N_NN	1
-		‍പ്പ്	1
-‍പ്പ്	1
-	‍പ്പെട്ട	1
-		N_NN	1
-‍പ്പെട്ട	1
-	N_NN	1
-		‍കിയാണ്	1
-‍കിയാണ്	1
-	V_VM_VNF	1
-		‍N_NNP	1
-‍മിച്ച	1
-	‍N_NN	1
-		‍N_NN	1
-???	3
-	JJ	1
-		N_NN	1
-	N_NN	1
-		N_NN	1
-	‍N_NN	1
-		V_VM_VNF	1
 ‍കിയിട്ടുണ്ട്	1
 	V_VAUX	1
 		V_VM_VNF	1
@@ -3381,9 +3325,6 @@ V_VM_V	1
 ‍ച്ച്മാസം	1
 	N_NN	1
 		N_NN	1
-‍ണ്ണമായും	1
-	‍V_VM_VNF	1
-		V_VM_VNF	1
 ‍RB	5
 	V_VM_VNF	3
 		JJ	1
@@ -3440,6 +3381,11 @@ V_VM_V	1
 		???	1
 	N_NN	1
 		N_NN	1
+???	2
+	JJ	1
+		N_NN	1
+	‍N_NN	1
+		V_VM_VNF	1
 ‍മ	1
 	N_NN	1
 		N_NN	1
@@ -3608,9 +3554,7 @@ V_VM_VNF_RP	1
 ‍മയില്	1
 	‍N_NN	1
 		V_VM_VNF	1
-‍ദ	2
-	N_NNP	1
-		N_NN	1
+‍ദ	1
 	‍N_NN	1
 		V_VM_VNF	1
 ‍പ്പന	1
@@ -3635,9 +3579,6 @@ V_VM_VNF_RP	1
 		‍N_NN	1
 ‍‍റെനോ	1
 	N_NN	1
-		N_NN	1
-‍മാണ	1
-	‍N_NN	1
 		N_NN	1
 ‍മാണം	1
 	N_NN	1
@@ -3684,3 +3625,9 @@ V_VM_VNG	1
 NN	1
 	N_NNP	1
 		V_VM	1
+V_VM-VNF	1
+	V_VAUX	1
+		N_NN	1
+N-NN	1
+	V_VM_VNF	1
+		N_NN	1

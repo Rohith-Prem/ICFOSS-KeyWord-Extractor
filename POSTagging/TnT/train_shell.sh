@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-./tnt-para newmodel.txt
+./tnt-para largest.txt

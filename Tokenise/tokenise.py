@@ -45,7 +45,7 @@ def main():
     inp_file.close()
     allwords.close()
 
-    number_of_words = len(tks)
+    number_of_words = len(tokens)
     print(number_of_words)
     return number_of_words
 
@@ -53,6 +53,6 @@ def tokenizer():
     wc = main()
     return wc
 
-#if __name__ == '__main__':
-#    main()
+if __name__ == '__main__':
+    main()
 

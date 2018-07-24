@@ -4,7 +4,7 @@ import csv
 
 
 #print(tokens)
-tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX', 'VVMVF']  # nnn-1 nnnp-2 nnnst-3 verb-4
+tag = ['NNN', 'NNNP', 'NNST', 'VVMVNF', 'VVAUX', 'VVMVF', "VVN"]  # nnn-1 nnnp-2 nnnst-3 verb-4
 keywords = dict()
 final_result = dict()
 
@@ -20,8 +20,8 @@ def main(wc):
     in_file.close()
     words = text.split('\n')
     print(words)
-    tokens = [tk.split('\\') for tk in words if '\\' in tk]
-    #print(tokens)
+    tokens = [tk.split() for tk in words if len(tk.split()) == 2]
+    print(tokens)
     id = 1
     # filtering nouns and verbs
     for t in tokens:
@@ -40,6 +40,8 @@ def main(wc):
                 keywords.setdefault(id, []).append("VVAUX")
             elif t[1] == "VVMVF":
                 keywords.setdefault(id, []).append("VVMVF")
+            elif t[1] == "VVN":
+                keywords.setdefault(id, []).append("VVN")
             else:
                 break
             id += 1
@@ -71,7 +73,8 @@ def main(wc):
             result[key] = value
     #print(result)
 
-    # assigning term frequency
+
+    # assigning TF
     wordcount = float(wc)
     for key, value in result.items():
         tf = value[2] / maxfreq
@@ -96,16 +99,29 @@ def main(wc):
             result.setdefault(key, []).append(0)
     #print(result)
 
+
     #assigning depth
     for key, values in result.items():
-        for i, check in enumerate(allwords):
+        pos = -1
+        for i,check in enumerate(allwords):
             if values[0] == check:
                 pos = i
+                break
             else:
                 continue
-        depth = float(pos/wordcount)
+        depth = float(pos / wordcount)
         result.setdefault(key, []).append(depth)
     print(result)
+
+    #assigning LEN
+    lengs = [len(x) for x in allwords]
+    max_len = max(lengs)
+
+    for key, val in result.items():
+        LEN = float(len(val[0])/max_len)
+        result.setdefault(key, []).append(LEN)
+    print(result)
+
 
     #writing to features text file
     for value in result.values():
@@ -114,8 +130,9 @@ def main(wc):
         tf = str(value[2])
         hu = str(value[3])
         dp = str(value[4])
-        line = pos + " " + tf + " " + hu + " " + dp
-        #line = wd + " " + pos + " " + tf + " " + hu + " " + dp
+        ln = str(value[5])
+        #line = pos + "\t" + tf + "\t" + hu + "\t" + dp + "\t" + ln
+        line = wd + " " + pos + " " + tf + " " + hu + " " + dp + " " + ln
         f_out.write(line+"\n")
     hurl.close()
     f_out.close()
@@ -127,8 +144,8 @@ def featureExtractor(x):
     return ret
 
 
-if __name__ == '__main__':
-    main(125)
+#if __name__ == '__main__':
+#    main(84)
 
 
 
