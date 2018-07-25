@@ -6,8 +6,8 @@
       <change beforePath="$PROJECT_DIR$/CRF/features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CRF/features.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRF/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CRF/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRF/train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CRF/train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Evaluation/eval.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Evaluation/eval.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Extraction/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/feature_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/feature_extraction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Features/features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/features.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Features/head_url.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/head_url.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Features/tagged_split.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Features/tagged_split.txt" afterDir="false" />
@@ -16,9 +16,9 @@
       <change beforePath="$PROJECT_DIR$/POSTagging/tagged_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/tagged_text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/POSTagging/tagged_text2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/tagged_text2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/POSTagging/tokenized_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POSTagging/tokenized_text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tokenise/scrapped_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tokenise/scrapped_text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/keyword_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.sh" beforeDir="false" afterPath="$PROJECT_DIR$/predict.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="keyword_extractor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="keyword_extractor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/keyword_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="45">
+              <caret line="10" column="135" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
             </state>
           </provider>
         </entry>
@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indic_tokenize.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="indic_tokenize.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="1590">
               <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
             </state>
           </provider>
@@ -59,8 +59,8 @@
       <file leaf-file-name="feature_extraction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="137" column="17" lean-forward="true" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
+            <state relative-caret-position="193">
+              <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -103,14 +103,14 @@
         <option value="$PROJECT_DIR$/Extraction/extraction.py" />
         <option value="$PROJECT_DIR$/POSTagging/TnT/clean.py" />
         <option value="$PROJECT_DIR$/POSTagging/split_tagged.py" />
-        <option value="$PROJECT_DIR$/Features/feature_extraction.py" />
-        <option value="$PROJECT_DIR$/keyword_extractor.py" />
         <option value="$PROJECT_DIR$/Tokenise/tokenise.py" />
         <option value="$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py" />
+        <option value="$PROJECT_DIR$/keyword_extractor.py" />
+        <option value="$PROJECT_DIR$/Features/feature_extraction.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="343" />
     <option name="width" value="682" />
     <option name="height" value="735" />
@@ -166,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tokenise">
+  <component name="RunManager" selected="Python.keyword_extractor">
     <configuration name="clean" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ICFOSS-KeyWord-Extractor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -266,8 +266,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tokenise" />
         <item itemvalue="Python.keyword_extractor" />
+        <item itemvalue="Python.tokenise" />
         <item itemvalue="Python.feature_extraction" />
         <item itemvalue="Python.clean" />
         <item itemvalue="Python.extraction" />
@@ -288,7 +288,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="698" extended-state="7" />
+    <frame x="0" y="25" width="1366" height="698" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.33235726" />
@@ -614,23 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="137" column="17" lean-forward="true" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tokenise/tokenise.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -640,8 +623,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tokenise/irtokz/indic_tokenize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="1590">
           <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Features/feature_extraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyword_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" column="135" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
         </state>
       </provider>
     </entry>
