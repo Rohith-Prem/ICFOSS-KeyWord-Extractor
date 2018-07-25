@@ -117,24 +117,24 @@ class tokenize_ind():
         #print(wrds)
         for w in wrds:
             if '.' in w:
-                if w[0].isalpha():
+                if w[0:1] in self.NBP.keys():
                     pass
                 else:
-                    w = self.dots.sub(' ', w)
-                    #w = self.english.sub('', w)
-
+                    dotcnt = w.count('.')
+                    if dotcnt == 1:
+                        w = self.dots.sub(' ', w)
             else:
                 #remove English characters
                 w = self.english.sub('', w)
             text += "%s " % w
         #print(text)
 
-        words = text.split()
-        text = str()
-        for word in words:
-            if word.endswith('.'):
-                word = self.dots.sub(' ', word)
-            text += "%s " % word
+        # words = text.split()
+        # text = str()
+        # for word in words:
+        #     if word.endswith('.'):
+        #         word = self.dots.sub(' ', word)
+        #     text += "%s " % word
 
         #seperate out "," except for Malayalam and Ascii digits
         #text = re.sub(u'([^0-9\u0d66-\u0d6f]),', r'\1 , ', text)
@@ -144,7 +144,7 @@ class tokenize_ind():
         #separate out Non malayalam followed by malayalam
         #text = re.sub(u'([^\u0D00-\u0D65\u0D73-\u0D7f\u2212-]|[\u0964-\u0965])([\u0D00-\u0D65\u0D73-\u0D7f])', r'\1 \2', text)
         #seperate out Malayalam fraction symbols
-        text = re.sub(u'([\u0d73\u0d74\u0d75])', r' \1 ', text)
+        #text = re.sub(u'([\u0d73\u0d74\u0d75])', r' \1 ', text)
         
         #seperate out hyphens 
         #text = self.multihyphen.sub(lambda m: r'%s' %(' '.join('-'*len(m.group(1)))), text)
