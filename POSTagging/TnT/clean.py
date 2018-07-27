@@ -1,4 +1,4 @@
-f_in = open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/TnT/new_corpus.txt", "r", encoding='utf-8')
+f_in = open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/TnT/new_largest.txt", "r", encoding='utf-8')
 f_out = open("/home/rohith/ICFOSS-KeyWord-Extractor/POSTagging/TnT/clean_corpus2.txt", 'w', encoding='utf-8')
 text = f_in.read()
 text = text.replace(u'\uFEFF', '')     #BYTE_ORDER_MARK

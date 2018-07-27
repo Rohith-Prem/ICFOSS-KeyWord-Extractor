@@ -3,7 +3,7 @@ import os
 
 
 def postagger():
-    subprocess.call(['./test_shell.sh'])
+    subprocess.call(['./postag.sh'])
 
 
 #if __name__ == '__main__':
