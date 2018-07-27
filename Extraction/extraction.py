@@ -1,5 +1,5 @@
 file = open("/home/rohith/ICFOSS-KeyWord-Extractor/Extraction/output.txt", 'r')
-
+f_out = open("/home/rohith/ICFOSS-KeyWord-Extractor/Extraction/keywords.txt", 'w', encoding='utf-8')
 
 def main(dictr):
     f = file.read()
@@ -35,6 +35,9 @@ def main(dictr):
     file.close()
     print(keywords) #final keyword output
     print(len(keywords))#no of keywords
+    for k in keywords:
+        f_out.write(k)
+        f_out.write('\n')
 
 
 def extraction(d):

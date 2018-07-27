@@ -131,8 +131,8 @@ def main(wc):
         hu = str(value[3])
         dp = str(value[4])
         ln = str(value[5])
-        line = pos + "\t" + tf + "\t" + hu + "\t" + dp + "\t" + ln
-        #line = wd + " " + pos + " " + tf + " " + hu + " " + dp + " " + ln
+        line = pos + "\t" + tf + "\t" + hu + "\t" + dp + "\t" + ln  #use for features withoud word
+        #line = wd + " " + pos + " " + tf + " " + hu + " " + dp + " " + ln      #use for features with malayalam words
         f_out.write(line+"\n")
     hurl.close()
     f_out.close()

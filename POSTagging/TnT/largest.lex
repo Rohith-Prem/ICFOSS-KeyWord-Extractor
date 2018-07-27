@@ -1,7 +1,7 @@
-%% lexicon created Mon Jul 23 15:15:33 2018 from file
+%% lexicon created Thu Jul 26 10:49:52 2018 from file
 %%     largest.txt
-%% the corpus contained 41004 tokens
-%% this lexicon contains 36645 tokens
+%% the corpus contained 41006 tokens
+%% this lexicon contains 36646 tokens
 %% upper/lower case is significant
 @USECASE		1
 @CARD			739	N_NN	1	QT_QTC	737	QT_QTF	1
@@ -16543,6 +16543,7 @@ x’N_NN		1	???	1
 തെരുവില്	1	N_NN	1
 തെരുവുകളിൽ	1	N_NN	1
 തെരുവുകള്	1	N_NN	1
+തെരുവുനായയാണ്	1	N_NN	1
 തെരുവ്	1	N_NN	1
 തെര്രചെ	1	N_NN	1
 തെറാപ്പി	1	N_NN	1
@@ -18138,7 +18139,7 @@ x’N_NN		1	???	1
 നാമമേകി	1	V_VM_VF	1
 നാമറിയുന്നു	1	V_VM_VF	1
 നാമെല്ലാം	1	N_NN	1
-നായ		2	N_NN	1	N_NNP	1
+നായ		3	N_NN	2	N_NNP	1
 നായക		1	N_NN	1
 നായകനായി	2	N_NN	1	V_VM_VNF	1
 നായകനായിരുന്നു	1	V_VM_VF	1

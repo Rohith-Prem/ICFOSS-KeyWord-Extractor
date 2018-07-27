@@ -1,7 +1,7 @@
-%% n-grams created Mon Jul 23 15:15:33 2018 from file
+%% n-grams created Thu Jul 26 10:49:52 2018 from file
 %%     largest.txt
-%% the corpus contained 41004 words
-%% this file contains 225 uni-, 1082 bi-, and 3446 trigrams
+%% the corpus contained 41006 words
+%% this file contains 225 uni-, 1082 bi-, and 3445 trigrams
 __$	4
 	QT_QTC	2
 		JJ	1
@@ -308,11 +308,11 @@ JJ	628
 		N_NN	1
 	NN	1
 		N_NNP	1
-N_NN	19741
-	QT_QTC	209
+N_NN	19743
+	QT_QTC	210
 		QT_QTC	9
 		JJ	11
-		N_NN	90
+		N_NN	91
 		PR_PRP	2
 		V_VM_VNF	9
 		PSP	2
@@ -351,8 +351,8 @@ N_NN	19741
 		വ	1
 		ശയ്ക്ക്	1
 		NN	1
-	N_NN	9558
-		QT_QTC	101
+	N_NN	9559
+		QT_QTC	102
 		JJ	97
 		N_NN	4635
 		RD_PUNC	3
@@ -1802,8 +1802,7 @@ PSP	244
 		QT_QTC	2
 		N_NN	1
 	V_VAUX	18
-		QT_QTC	1
-		N_NN	7
+		N_NN	8
 		V_VM_VNF	3
 		V_VM_VF	1
 		N_NNP	5
@@ -2574,10 +2573,10 @@ RP_NEG	15
 	ച്ച	1
 		N_NN	1
 V_VAUX	2720
-	QT_QTC	114
+	QT_QTC	113
 		QT_QTC	4
 		JJ	5
-		N_NN	60
+		N_NN	59
 		PR_PRP	3
 		V_VM_VNF	1
 		PSP	1
@@ -2593,10 +2592,10 @@ V_VAUX	2720
 		DM_DMD	1
 		V_VAUX	3
 		N_NNP	2
-	N_NN	1297
+	N_NN	1298
 		QT_QTC	4
 		JJ	11
-		N_NN	648
+		N_NN	649
 		PR_PRP	1
 		V_VM_VNF	254
 		PSP	6

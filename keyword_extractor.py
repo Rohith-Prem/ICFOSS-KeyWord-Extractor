@@ -8,7 +8,8 @@ from Extraction import predict
 from Extraction import extraction
 
 
-link = "https://www.mathrubhumi.com/news/kerala/kerala-state-government-to-withdraw-munnar-special-tribunal-for-land-disputes-1.3001943"
+link = "https://www.mathrubhumi.com/news/kerala/cherkulam-abdulla-passed-away--1.3008057" \
+       ""
 ret = scrap.scrapper(link)
 sleep(1)
 while ret:
