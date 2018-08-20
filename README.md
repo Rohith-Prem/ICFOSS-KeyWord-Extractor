@@ -1,8 +1,9 @@
 # ICFOSS-KeyWord-Extractor
-### This project was implemented as a part of the summer internship programme at ICFOSS, Thiruvananthapuram, under the guidance of Dr. Rajeev R R.
+#### This project was implemented as a part of the summer internship programme at ICFOSS, Thiruvananthapuram, under the guidance of Dr. Rajeev R R.
+
 #### This project is an Automatic Keyword Extractor for Malayalam News Articles Using a CRF Model. 
 
-#### Program Modules
+### Program Modules
 
 ##### [keyword_extractor.py](/keyword_extractor.py) will run the entire system from start to end by accepting only the url as input.
 
