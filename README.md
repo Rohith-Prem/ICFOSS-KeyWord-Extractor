@@ -32,10 +32,15 @@
 
 ### General Instructions
    1)Remember to change all paths and path variables with respect to your local directories.
+   
    2)Read the comments for instructions.
+   
    3)Take care of the shell scripts used for TnT tagger and CRF++.
+   
    4)While using keyword_extractor.py predict.sh and postag.sh must be in the same folder.
-   5)URL is not recieved from standard input, the url variable has to be replaced for different urls(i got lazy :p )   
+   
+   5)URL is not recieved from standard input, the url variable has to be replaced for different urls(i got lazy :p )
+   
    6)For enquiries contact rohithcnss@gmail.com
 
 ### Web App
